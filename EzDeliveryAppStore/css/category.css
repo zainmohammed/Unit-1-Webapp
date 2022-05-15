@@ -1,0 +1,231 @@
+
+.cat_heads h3 {
+    color: #4BC25A;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+
+
+
+.item_category {
+    padding: 0;
+    width: 140px;
+    float: left;
+    border: 1px solid #f8f9fa;
+}
+
+    .item_category .item_category_box {
+        /* height: 128px; */
+        text-align: center;
+        /*border-radius: 16px; */
+        /* width: 129px; */
+        background-color: #FFf;
+        box-sizing: border-box;
+        /*box-shadow:0px 0px 3px #33ee55; */
+      
+        padding: 5px;
+    }
+
+
+        .item_category .item_category_box :hover {
+            transform: scale(1.1);
+            transition: 0.5s all;
+            -webkit-transition: 0.5s all;
+            -moz-transition: 0.5s all;
+            -ms-transition: 0.5s all;
+            -o-transition: 0.5s all;
+        }
+
+        .item_category .item_category_box img {
+            margin-top: 12px;
+            height: 70px;
+            width: 70px
+        }
+
+        .item_category .item_category_box p {
+            color: #4BC25A;
+            margin: 0;
+        }
+
+@media screen and (max-width: 640px) {
+
+
+    .item_category .item_category_box {
+        height: 100px;
+        text-align: center;
+        /* width: 100%; */
+        font-weight: bold;
+    }
+
+
+        .item_category .item_category_box img {
+            height: 70px;
+            width: 70px
+        }
+}
+
+@media screen and (max-width: 1280px) {
+
+
+    .item_category .item_category_box {
+        height: 150px;
+        text-align: center;
+        /* width: 108px; */
+        font-size: 13px;
+    }
+
+
+        .item_category .item_category_box img {
+            height: 100px;
+            width: 80px;
+        }
+}
+
+/*
+      @media screen and (max-width: 1084px){
+.item_category .item_category_box {
+    height: 150px;
+    text-align: center;
+    width: 117px;
+    font-size: 13px;
+}} */
+
+@media screen and (max-width: 480px) {
+    .item_category .item_category_box {
+        height: 150px;
+        text-align: center;
+        /* width: 98px !important; */
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .item_category .item_category_box {
+        height: 150px;
+        text-align: center;
+        /* width: 112px !important; */
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 732px) {
+
+    .item_category {
+        width: 50%;
+    }
+
+
+        .item_category .item_category_box {
+            height: 150px;
+            text-align: center;
+            /* width: 93px !important; */
+            font-size: 13px;
+        }
+}
+.green_background {
+    background-color: #4BC25A;
+    width: 100%;
+    padding: 40px;
+    margin-top: 2em;
+    height: 100%;
+    text-align: center;
+    padding: 0;
+    /*margin-bottom:2em;*/
+}
+
+
+
+
+    .green_background h2 {
+        color: white;
+        margin-bottom: 2em;
+    }
+
+    .green_background .green_box_file {
+        background-color: white;
+        text-align: center;
+        height: 50%;
+        width: 100%;
+        border-radius: 12px;
+        padding: 12px 8px;
+        margin-bottom: 1em;
+    }
+    
+        /*.green_background .green_box_file .green_box_link_apple {
+            background-color: white;
+            text-align: center;
+            height: 30%;
+            width: 100%;
+        }*/
+        .green_background .green_box_file .green_box_link_apple_img img {
+            height: 30px;
+            width: auto;
+            float: left;
+        }
+        .green_background .green_box_file .green_box_link_apple_p p {
+            font-size: 16px;
+            text-align: center;
+            margin-top: 7px;
+            vertical-align: middle;
+        }
+    .green_background .green_box_file_play {
+        background-color: white;
+        text-align: center;
+        height: 50%;
+        width: 100%;
+        border-radius: 12px;
+        padding: 12px 8px;
+      
+    }
+        .green_background .green_box_file_play .green_box_link_playstore_img img {
+            height: 30px;
+            width: auto;
+            float: left;
+        }
+        .green_background .green_box_file_play .green_box_link_playstore_p p {
+            font-size: 16px;
+            text-align: center;
+            margin-top: 7px;
+            vertical-align: middle;
+        }
+
+
+.mobile_img_ {
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+    .mobile_img_ img {
+        height: auto;
+       max-width:70%;
+    }
+
+
+
+@media screen and (max-width: 567px) {
+
+
+    .green_background {
+       
+        width: 100%;
+      
+    }
+
+
+}
+
+@media screen and (max-width: 567px) {
+
+
+    .mobile_img_ {
+      margin-top:2em;
+    }
+}
+.link_block img{
+    display:block;
+}

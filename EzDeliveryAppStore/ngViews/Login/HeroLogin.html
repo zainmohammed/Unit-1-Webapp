@@ -1,0 +1,134 @@
+﻿
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- GOOGLE WEB FONT -->
+
+    <script src="https://use.fontawesome.com/43681fd11d.js"></script>
+    <!-- BASE CSS -->
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/elegant_font/elegant_font.min.css" rel="stylesheet">
+
+    <link href="css/fontello/css/fontello.min.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/pop_up.css" rel="stylesheet">
+    <link href="elegant_font/HTML CSS/fstyle.css" rel="stylesheet">
+    <!-- SPECIFIC CSS -->
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+    <style>
+
+        .login_icon {
+            color: #fff;
+            font-size: 60px;
+            opacity: 1;
+        }
+    </style>
+
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-spinner sk-spinner-wave" id="status">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
+    </div><!-- End Preload -->
+
+    <div class="" id="" tabindex="-1" role="" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog" style=" top: 70px;">
+            <div class="modal-content modal-popup">
+
+                <form action="#" class="popup-form" id="myLogin">
+                    <div class="login_icon"><img src="img/logo.png"/ style="width: 150px;"></div>
+                    <input type="text" class="form-control form-white" placeholder="Mobile Number">
+                    <!--<input type="password" class="form-control form-white" placeholder="Password">-->
+                    <!--<div class="text-left">
+                        <a href="#">Forgot Password?</a>
+                    </div>-->
+                    <a href="index.html" type="submit" class="btn btn-submit">Submit</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="layer"></div><!-- Mobile menu overlay mask -->
+    <!-- Login modal -->
+    <div class="modal fade" id="login_2" tabindex="-1" role="dialog" aria-labelledby="myLogin" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-popup">
+                <a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+                <form  class="popup-form" name="HeroLogin" novalidate autocomplete="off">
+                    <div class="login_icon"><i class="icon_lock_alt"></i></div>
+                    <input type="text" class="form-control form-white" placeholder="Mbile Number">
+                    <!--<input type="text" class="form-control form-white" placeholder="Password">-->
+                    <!--<div class="text-left">
+                        <a href="#">Forgot Password?</a>
+                    </div>-->
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div><!-- End modal -->
+    <!-- COMMON SCRIPTS -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/common_scripts_min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="assets/validate.js"></script>
+
+    <!-- SPECIFIC SCRIPTS -->
+    <script>
+
+        var bellIcon = document.querySelector('.bell-icon');
+        var dropdownMenu = document.querySelector('.dropdown');
+        var notificationNumber = document.getElementsByClassName('notification-number');
+        var timeDelay = [1000, 2000, 3000, 4000, 5000, 6000];
+        function randomNumber() {
+            var random = Math.floor(Math.random() * 6);
+            for (var i = 0; i < notificationNumber.length; i++) {
+                notificationNumber[i].textContent = random;
+            }
+        }
+        function randomRange(data) {
+            var newTime = data[Math.floor(data.length * Math.random())];
+            return newTime;
+        }
+        function bellCheck(event) {
+            var isClickInside = bellIcon.contains(event.target);
+            if (isClickInside) {
+                dropdownMenu.classList.toggle('hide');
+                if (dropdownMenu.classList.contains('hide')) {
+                    clearInterval(notificationInterval);
+                    notificationInterval = setInterval(randomNumber, 2000);
+                }
+                else {
+                    for (var i = 0; i < notificationNumber.length; i++) {
+                        notificationNumber[i].textContent = 0;
+                        clearInterval(notificationInterval);
+                    }
+                }
+            }
+            else {
+                dropdownMenu.classList.add('hide');
+                clearInterval(notificationInterval);
+                notificationInterval = setInterval(randomNumber, randomRange(timeDelay));
+            }
+        }
+        var notificationInterval = setInterval(randomNumber, randomRange(timeDelay));
+        window.addEventListener('click', bellCheck);
+    </script>
+</body>
+    

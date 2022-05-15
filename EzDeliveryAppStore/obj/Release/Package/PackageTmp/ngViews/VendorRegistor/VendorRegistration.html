@@ -1,0 +1,526 @@
+﻿<!--<link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+<div>
+    <table class=" table table-bordered" width="50%">
+        <h2>Vendor Registor</h2>
+        <tr>
+            <td>Select Categery</td>
+            <td>
+                <select ng-model="vendor.CategoryId">
+                    <option value="">Select Category</option>
+                    <option value="{{item.CategoryId}}" ng-repeat="item in Categories">{{item.CategoryNameEn}}</option>
+                    
+                </select>
+
+            </td>
+        </tr>
+
+        <tr class="col-md-6">
+            <td class="label">Start Time</td>
+            <td class="form-input"
+                moment-picker="vendor.OpenTime" show-header="false" format="HH:mm">
+
+                <input class="form-control"
+                       name="StartTime"
+                       style="padding-left: 10px;"
+                       ng-model="vendor.OpenTime"
+                       show-header="false"
+                       ng-model-options="{ updateOn: 'blur' }" required>
+            </td>
+        </tr>
+
+        <tr class="col-md-6">
+            <td class="label">Start Time</td>
+            <td class="form-input"
+                moment-picker="vendor.CloseTime" show-header="false" format="HH:mm" min-date="vendor.OpenTime">
+
+                <input class="form-control"
+                       name="StartTime"
+                       style="padding-left: 10px;"
+                       ng-model="vendor.CloseTime"
+                       show-header="false"
+                       ng-model-options="{ updateOn: 'blur' }" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Person name</td>
+            <td>
+                <input type="text" value=" " ng-model="vendor.PersonName" />
+            </td>
+        </tr>
+        <tr>
+            <td>Whatsapp Number</td>
+            <td>
+                <input type="number" value=" " ng-model="vendor.WhatsappNo" />
+            </td>
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            <td>
+                <input type="number" value=" " ng-model="vendor.MobileNo" />
+            </td>
+        </tr>
+        
+        <tr>
+            <td><input type="button" ng-click="RegisterVendor(vendor)" value="Register" /></td>
+        </tr>
+       
+    </table>
+</div>-->
+
+    <style>
+
+
+        body {
+            background: url() no-repeat center;
+            background-image: url('../../Content/b1.jpg');
+            background-size: cover !important;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -ms-background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Nunito', sans-serif;
+            height: 50%;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .content {
+            max-width: 500px;
+            margin: 5em auto;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            margin-left: 42em;
+        }
+
+        .contentsec {
+            max-width: 500px;
+            margin: 5em auto;
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+
+        .content-end {
+            padding: 1em 4em;
+            /* background: rgba(0, 0, 0, 0.4);*/
+            background: rgba(17, 97, 20, 0.4);
+            border-radius: 1px 1px 1px 0px;
+            margin: 0 1em;
+            position: relative;
+            z-index: 1;
+            border: 3px solid white;
+            margin-top: 2em;
+        }
+
+            .content-end:after:before {
+                border: 62px solid #45b252;
+                content: "";
+                display: inline-block;
+                left: -30px;
+                position: absolute;
+                right: 30px;
+                top: -30px;
+                bottom: 30px;
+                z-index: -1;
+            }
+
+            .content-end:after {
+                border: 5px solid #fff;
+                content: "";
+                display: inline-block;
+                left: -30px;
+                position: absolute;
+                right: 30px;
+                top: -30px;
+                bottom: 30px;
+                z-index: -1;
+            }
+
+            .content-end:before {
+                border: 12px solid #45b252;
+                content: "";
+                display: inline-block;
+                left: -30px;
+                position: absolute;
+                right: 30px;
+                top: -30px;
+                bottom: 30px;
+                z-index: -1;
+            }
+
+
+        img {
+            margin-left: -7em;
+            margin-top: -5em;
+            height: 76px;
+        }
+
+        h1.title-agile {
+            padding: 0.5em 0 0;
+            text-transform: capitalize;
+            color: #fff;
+            font-size: 3.5em;
+            text-shadow: 1px 1px 1px #000;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 25px;
+            color: #fff;
+            letter-spacing: 2px;
+            margin-bottom: 1em;
+        }
+
+        .field-one label {
+            font-size: 15px;
+        }
+
+
+        form .field-one {
+            background: transparent;
+            display: flex;
+            display: flex;
+            display: -webkit-box;
+            /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;
+            /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;
+            /* TWEENER - IE 10 */
+            display: -webkit-flex;
+            /* NEW - Chrome */
+            margin: 0 0 12px 0;
+        }
+
+            form .field-one span {
+                flex: 1;
+                -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+                -moz-box-flex: 1; /* OLD - Firefox 19- */
+                width: 20%; /* For old syntax, otherwise collapses. */
+                -webkit-flex: 1; /* Chrome */
+                -ms-flex: 1; /* IE 10 */
+                color: #252525;
+                font-size: 1em;
+                background: #fff;
+                text-align: center;
+                line-height: 48px;
+                border-width: 1px 1px 1px 1px;
+            }
+
+
+            form .field-one .input-field {
+                flex: 3 50%;
+                -webkit-box-flex: 3 50%; /* OLD - iOS 6-, Safari 3.1-6 */
+                -moz-box-flex: 3 50%; /* OLD - Firefox 19- */
+                -webkit-flex: 3 50%; /* Chrome */
+                -ms-flex: 3 50%; /* IE 10 */
+            }
+
+        .input-field input[type="submit"] {
+            background: #45b252;
+            border: none;
+            color: #fff;
+            padding: 12px 15px;
+            text-transform: uppercase;
+            font-family: 'Nunito', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.5s all;
+            -webkit-transition: 0.5s all;
+            -moz-transition: 0.5s all;
+            -o-transition: 0.5s all;
+            -ms-transition: 0.5s all;
+        }
+
+            .input-field input[type="submit"]:hover {
+                background: #fff;
+                color: #45b252
+            }
+
+        .input-field input {
+            padding: 13px 15px 13px 0;
+            font-size: 16px;
+            color: #333;
+            letter-spacing: 1px;
+            border: none;
+            border-width: 1px 1px 1px 1px;
+            background: #fff;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+            width: 100%;
+            outline: none;
+        }
+
+        .account {
+            padding: 20px 0;
+        }
+
+            .account p {
+                color: #fff;
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+
+                .account p a {
+                    color: darkgreen;
+                    opacity: 4;
+                }
+
+                    .account p a:hover {
+                        color: #fff;
+                    }
+
+
+        /* -- Responsive code -- */
+        @media screen and (max-width: 1280px) {
+            .content {
+                margin: 4em auto;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            h1.title-agile {
+                font-size: 3em;
+            }
+        }
+
+        @media screen and (max-width: 667px) {
+            h1.title-agile {
+                font-size: 2.8em;
+            }
+
+            .content {
+                margin: 3em auto 1em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1.title-agile {
+                font-size: 2.7em;
+            }
+
+            form .field-one .input-field {
+                flex: 3 45%;
+            }
+
+            .content-end:after {
+                border: 4px solid #fff;
+                left: -15px;
+                right: 15px;
+                top: -15px;
+                bottom: 15px;
+            }
+
+            .content-end {
+                padding: 2em 3em;
+            }
+        }
+
+        @media screen and (max-width: 414px) {
+            h1.title-agile {
+                font-size: 2.2em;
+                letter-spacing: 1px;
+            }
+
+            form .field-one .input-field {
+                flex: 3 41%;
+            }
+
+            h2 {
+                font-size: 22px;
+                letter-spacing: 1px;
+            }
+        }
+
+        @media screen and (max-width: 384px) {
+            .input-field input, .input-field input[type="submit"] {
+                padding: 10px 10px;
+            }
+
+            form .field-one span {
+                line-height: 40px;
+            }
+
+            .content-end {
+                padding: 2em 2em;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            form .field-one .inpu-field {
+                flex: 3 37%;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            h1.title-agile {
+                font-size: 1.7em;
+            }
+
+            .content-end {
+                padding: 1.5em;
+            }
+
+                .content-end:after {
+                    border: 3px solid #fff;
+                    left: -10px;
+                    right: 10px;
+                    top: -10px;
+                    bottom: 10px;
+                }
+        }
+
+        h2 img {
+            margin-left: 0em;
+            margin-top: -0.5em;
+            height: 32px;
+        }
+        
+        .input-field input[type='file'] {
+    position: absolute;
+    opacity: 0;
+}
+.field-one label {
+    font-size: 16px;
+    color: #333;
+    opacity: 0.7;
+    font-family: 'Nunito', sans-serif;
+}
+        
+        .error {
+    position: absolute;
+    background:#f19898;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    top: 348px;
+    z-index: 2;
+}
+.error:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent #f19898 transparent;
+    border-style: solid;
+    border-width: 10px;
+}
+    </style>
+
+    <div>
+
+        <div class="content">
+
+            <div class="content-end">
+                <img src="images/rb5.svg">
+                <h2> vendor Register Here <!--   <i class="fa fa-hand-o-down" aria-hidden="true"></i> -->  <img src="images/del.png"></h2>
+                <form action="#" method="post">
+
+
+                    <div class="field-one">
+                        <span class="far fa-hand-point-right" aria-hidden="true" style="color:#45b252"> </span>
+                        <select name="carlist" form="carform" ng-model="vendor.CategoryId" placeholder="Contact Number" required="" style="
+                         width: 21em;   border: none; padding: 13px 15px 13px 0; font-size: 14px;">
+                            <option value=""> Choose Your Category</option>
+                            <option value="{{item.CategoryId}}" ng-repeat="item in Categories">{{item.CategoryNameEn}}</option>
+                        </select>
+
+                    </div>
+
+                    <div class="field-one">
+                        <span class="fas fa-clock" aria-hidden="true" style="color:#45b252"> </span>
+
+                        <div class="input-field" moment-picker="vendor.OpenTime" show-header="false" format="HH:mm">
+                           
+                            <input name="StartTime" placeholder="Open Time"
+                                   style="padding-left: 10px;"
+                                   ng-model="vendor.OpenTime"
+                                   show-header="false"
+                                   ng-model-options="{ updateOn: 'blur' }"
+                                   required>
+                        </div>
+                    </div>
+
+
+                    <div class="field-one">
+                        <span class="fas fa-clock" aria-hidden="true" style="color:#45b252"> </span>
+
+                        <div class="input-field" moment-picker="vendor.CloseTime" show-header="false" format="HH:mm">
+                           
+                            <input name="StartTime" placeholder="End Time"
+                                   style="padding-left: 10px;"
+                                   ng-model="vendor.CloseTime"
+                                   show-header="false"
+                                   ng-model-options="{ updateOn: 'blur' }"
+                                   required>
+                        </div>
+                    </div>
+
+
+                    <div class="field-one">
+                        <span class="fa fa-user" aria-hidden="true" style="color:#45b252"></span>
+                        <div class="input-field">
+                            <input name="text1" id="text1" type="text" value="" ng-model="vendor.PersonName" placeholder="Person Name" required>
+                            <div class="error">
+                                Person Name required
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-one">
+                        <span class="fa fa-phone" aria-hidden="true" style="color:#45b252"></span>
+                        <div class="input-field">
+                            <input name="number" id="number" type="text" value="" ng-model="vendor.MobileNo" placeholder="Contact Number" required>
+                            <div class="error">
+                                Contact Number Required
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-one">
+                        <span class="fab fa-whatsapp" aria-hidden="true" style="color:#45b252"></span>
+                        <div class="input-field">
+                            <input name="number" id="number" type="text" value="" ng-model="vendor.WhatsappNo" placeholder="Whatsapp Number" required>
+                        </div>
+                    </div>
+
+
+                    <!--<div class="field-one">
+                        <span class="fas fa-file-signature" aria-hidden="true" style="color:#45b252"></span>
+                        <div class="input-field">
+                            <input name="myFile" id="file" type="file" placeholder="Esignature">
+
+                        </div>
+                    </div>-->
+
+                    <div class="field-one">
+                        <span class="fa fa-user" aria-hidden="true" style="color:#45b252"></span>
+                        <div class="input-field">
+                            <input name="text1" id="text1" type="text" ng-model="vendor.UserName" placeholder="UserName">
+                        </div>
+                    </div>
+
+
+                    <div class="field-one">
+                        <span class="fa fa-lock" aria-hidden="true" style="color:#45b252"></span>
+                        <div class="input-field">
+                            <input name="password" id="myInput" type="Password" ng-model="vendor.Password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                            <input id="saveForm" name="saveForm" ng-click="CreateDriver(Emp)" type="button" value="Register" style="background-color: #45b252" ;="">
+                    </div>
+                    <div class="account">
+                        <p class="text-center">Already have an account ? <a href="#">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>

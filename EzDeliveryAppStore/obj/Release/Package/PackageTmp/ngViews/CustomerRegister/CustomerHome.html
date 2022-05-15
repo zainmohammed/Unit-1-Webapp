@@ -1,0 +1,626 @@
+﻿
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .container-fluid {
+        width: 100%;
+        overflow: hidden;
+        /*padding: 0;*/
+
+    }
+
+
+
+    
+    .container{
+ 
+        /*padding: 0;*/
+
+        padding: 0;
+    width: 80%;
+    }
+
+    .tagline1 {
+        color: #4BC25A;
+        font-size: 13px;
+        margin-top: -3em !important;
+        /* position: absolute; */
+        text-decoration: underline;
+        top: 70%;
+        left: 25%;
+        margin-left: 11em !important;
+        /* margin-left: 74px!important; */
+    }
+
+
+
+    .footer {
+        margin-top: 5em;
+    }
+</style>
+<link href="../../css/home.css" rel="stylesheet" />
+<body>
+    <div class="container-fluid" id="container-fluid">
+        <section>
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0">
+
+                    <!--<header class="header">-->
+                    <!--<a href="home.html" class="logo  logo_field">
+                        <figure>
+
+                            <img src="../../../images/logo.png">
+                            <span style="color:#4BC25A;font-size:30px;font-weight:bold;"> Ezy</span>
+                            <p class="tagline"> Make Your Life Ezy </p>
+                        </figure>
+
+                    </a>-->
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 pl-0">
+
+                        <a href="home.html" class="logo  logo_field">
+                            <figure>
+
+                                <img src="../../../images/logo.png">
+                                <span style="color:#4BC25A;font-size:25px;font-weight:bold;"> Ezy Delivery</span>
+                                <p class="tagline1"> Make Your Life Ezy </p>
+                            </figure>
+
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 pl-0 pull-right">
+
+                        <!--<input class="menu-btn" type="checkbox" id="menu-btn" />
+                        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>-->
+                        <!--<ul class="menu">-->
+                        <button class="bussiness" ng-show="AuthCust!='false'">
+                            <a href="Order"> Ez Order</a>
+
+                        </button>
+
+                        <button class="partner" ng-show="AuthCust!='false'">
+                            <a href="/MyOrder"> My Order</a>
+
+
+                        </button>
+
+                        <button class="login_s " ng-show="AuthCust!='false'">
+                            <a href="/Logout">
+                                Logout
+                            </a>
+
+                        </button>
+
+                        <button class="login_s_new  " ng-show="AuthCust=='false'">
+                            <a href="Login">
+                                Login/SignUp Customer
+                            </a>
+
+                        </button>
+                        <button class="login_s_new  " ng-show="AuthCust=='false'">
+
+                            <a href="http://localhost:62914/HeroLogin">
+                                Login/SignUp Hero
+                            </a>
+
+                        </button>
+
+                    </div>
+                    <!--</ul>-->
+                    <!--</header>-->
+                    <!--<div class="col-lg-4 pl-0 logo_field">
+                        <div class="row">
+                            <a href="/Home"><img src="../../../images/logo.png"> </a>
+                        </div>
+
+
+                        <div class="text_ezy">
+                            <div class="row">
+                                <a href="home.html">
+                                    <h2> Ezy</h2>
+                                </a>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!--<div class="col-lg-4 pl-0">
+
+                    </div>
+
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pl-0 pull-right">
+                        <div class="row">
+
+                            <button class="bussiness"  ng-show="AuthCust!='false'">
+                                <a href="Order"> Ez Order</a>
+
+                            </button>
+
+                            <button class="partner"  ng-show="AuthCust!='false'">
+                                <a href=""> Partner</a>
+
+
+                            </button>
+
+                            <button class="login_s " ng-show="AuthCust!='false'">
+                                <a href="/Logout">
+                                    Logout
+                                </a>
+
+                            </button>
+
+                            <button class="login_s "  ng-show="AuthCust=='false'">
+                                <a href="Login">
+                                    Login/SignUp
+                                </a>
+
+                            </button>
+
+
+                        </div>
+
+                    </div>-->
+
+
+
+
+
+
+                </div>
+            </div>
+            <!--<div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0">
+
+                    <div class="col-lg-2 pl-0">
+
+                    </div>
+
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 pl-0">
+
+                        <div class="row">
+
+                            <div class="col-lg-3 col-md-5 col-sm-5 col-xs-5 eachFormField "
+                                 style="margin-left: 0em;">
+                                <label class="field a-field a-field_a3 page__field length_increase">
+                                    <input class="field__input" placeholder=" from" name=" Search" id=" from"
+                                           style="padding-right: 29px; border:2px solid #cec6c6;color:#cec6c6;">
+                                    <span class="field__label-wrap">
+                                        <span class="field__label">
+                                            From
+                                        </span>
+                                    </span>
+
+                                </label>
+                                <div id="errorNumber" class="error">
+                                    From is required
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="col-lg-3 col-md-5 col-sm-5 col-xs-5 eachFormField ">
+                                <label class="field a-field a-field_a3 page__field ">
+                                    <input class="field__input length_increase" placeholder="To" name="CustomerId" id="To" style="padding-right: 29px; border:2px solid #cec6c6; color:#cec6c6;">
+                                    <span class="field__label-wrap">
+                                        <span class="field__label">
+                                            To
+                                        </span>
+                                    </span>
+
+                                </label>
+                                <div id="errorNumber" class="error">
+                                    To is required
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-lg-2 col-xs-2 col-sm-2 col-md-2 pl-0 ft_submit_btn eachFormField">
+                                <button class="submit">
+                                    <a href="offer.html"> Submit </a>
+                                </button>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <div class="col-lg-2 pl-0">
+
+                    </div>
+
+
+
+
+                </div>
+            </div>-->
+            <div class="row">
+                <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 home_banner pr-0 pl-0" style="margin-top:1em;">
+                    <img src="../../../images/bannerimg.png">
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 pr-0">
+
+
+
+                    <div class="boxorder">
+
+
+                        <div class="order">
+                            <div class="ordercontent">
+                                <figure>
+                                    <img src="../../../images/Group 199.svg">
+                                </figure>
+
+
+                                <div class="subheads">
+                                    <p> We Deliver Packages </p>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="order">
+                            <div class="ordercontent">
+                                <figure>
+                                    <img src="img/../../../../images/Group 206.svg">
+                                </figure>
+
+                                <div class="subheads">
+                                    <p> We Deliver Utilities</p>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="order">
+                            <div class="ordercontent">
+                                <figure>
+                                    <img src="img/../../../../images/24x7.svg">
+                                </figure>
+
+                                <div class="subheads">
+                                    <p> Available 24 X 7</p>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="row ">
+                <div class="col-lg-12">
+
+                </div>
+
+            </div>
+
+        </section>
+        <section >
+
+            <div class="container ">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="  cat_heads">
+                            <h3> Categories</h3>
+                        </div>
+                    </div>
+
+                    <div class=" row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <a href="sendpackage.html"> <img src="../../../images/sendpackage.svg"></a>
+
+                                    <p> Send packages</p>
+                                </div>
+                            </div>
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/homeutil.svg">
+                                    <p> Home Utilities</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1219.svg">
+                                    <p>Restaurents</p>
+                                </div>
+                            </div>
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1220.svg">
+                                    <p> Pharmacy</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1221.svg">
+                                    <p> Vegetables</p>
+                                </div>
+                            </div>
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1222.svg">
+                                    <p> Fruits</p>
+                                </div>
+                            </div>
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1224.svg">
+                                    <p> Meat</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1225.svg">
+                                    <p> Fish</p>
+                                </div>
+                            </div>
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1226.svg">
+                                    <p> Chicken</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1228.svg">
+                                    <p> Bakery</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1229.svg">
+                                    <p> Hardware</p>
+                                </div>
+                            </div>
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1230.svg">
+                                    <p> Tailors</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1231.svg">
+                                    <p> Beauty</p>
+                                </div>
+                            </div>
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1232.svg">
+                                    <p> Bouquets</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1233.svg">
+                                    <p> Stationery</p>
+                                </div>
+                            </div>
+
+
+                            <div class="item_category">
+                                <div class="item_category_box">
+                                    <img src="../../../images/Group 1234.svg">
+                                    <p> Electrical</p>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+                    <!--row -->
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-lg-12 just_img">
+
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                        <div class="green_bg">
+                            <!--   <img src="../../../images/catbg1.svg">-->
+
+
+                            <h2> Save Time And Get Things Done</h2>
+                            <div class="green_box">
+                                <div class="green_box_link">
+                                    <img src="../../../images/apple.png">
+                                    <p> Download App On App Store</p>
+                                </div>
+                            </div>
+
+                            <div class="green_box">
+                                <div class="green_box_link2">
+                                    <img src="../../../images/playstore.png">
+                                    <p> Get it on Google play </p>
+                                </div>
+                            </div>
+                            <!--
+                                                        <div class="send_via">
+                                                            <h4> Send Link Via SMS to Install the app</h4>
+                                                            <input type="text">
+                                                            <button class="link_via">
+                                                                SEND
+                                                            </button>
+                                                        </div>
+                                 -->
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-12 col-xs-12 col-sm-12">
+                        <div class="sample_mobimg">
+                            <!-- <img src="../../../images/background@2x.png"> -->
+
+                            <img src="../../../images/imagetaglinelogo.png">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section class="footer">
+            <div class="row">
+                <div class="col-lg-12 grey_box_footer">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
+
+                            <div class="logo_footer">
+                                <a href="home.html"><img src="../../../images/logo.png"> </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-7  col-md-9 col-sm-9 col-xs-9 icons_ft">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 social_icons1" style="/* margin-left: 0em; */  ">
+
+
+                                        <ul class="icons1">
+                                            <li>
+                                                <img src="../../../images/facebook.png">
+                                            </li>
+                                            <li>
+                                                <img src="../../../images/twitter.png">
+                                            </li>
+                                            <li>
+                                                <img src="../../../images/whatsapp.png">
+                                            </li>
+                                            <li>
+                                                <img src="../../../images/gmail (1).png">
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu_footer">
+                                        <ul>
+                                            <li>
+                                                <a href=""> About </a>
+                                            <li>
+                                                <a href=""> Careers </a>
+
+                                            </li>
+                                            <li>
+                                                <a href=""> Terms & Conditions </a>
+
+                                            </li>
+                                            <li>
+                                                <a href=""> privacy Policy </a>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-2 col-md-12">
+                            <div class="row">
+
+                                <div class="walking_footer pull-right">
+                                    <img src="../../../images/walking.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="copyright">
+            <div class="row" style="background-color:#4BC25A">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+
+                    <div class="green_bg_ft1">
+                        <p> atozeesolutions@2019</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    <!-- container div close-->
+</body>

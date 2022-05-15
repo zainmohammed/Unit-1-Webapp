@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact us | Corporate creations</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cant determine what to reward your employees with? Take a spin and let us know what you can find here!">
+    <meta name="keywords" content="Corporate creation,Gifts,Corporate gifts,Your logo,Your logo here,Your brand here,">
+    <meta name="author" content="ibn Mohammed">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+          crossorigin="anonymous">
+
+    <!-- bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- FavIcon -->
+    <link rel="icon" href="../assets/images/common/favicon.png" type="image/gif" sizes="16x16">
+
+    <!-- G-font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+
+    <link rel="stylesheet" href="css/form.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+  
+
+
+    <!-- <script type="text/javascript" src="../assets/scripts/products.js"></script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>-->
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="container" id="container">
+        <section>
+
+            <div class="visiting-card">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 left-col">
+                        <div class="login_image">
+                            <img src="../../../images/log.png">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 right-col">
+
+                        <form class="LoginForm" id="contactForm" autocomplete="off">
+                            <div class="logo_img">
+                                <img src="../../../images/logo.png">
+                            </div>
+                            <h2 style="margin-bottom: 10px;color:#4BC25A;">Login</h2>
+                            <p class="subHeading" style="margin-bottom: 15px;">
+                                <span style="color: #E76886;">*</span> Indicates mandatory fields
+                            </p>
+
+
+
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 eachFormField">
+                                    <label class="field a-field a-field_a3 page__field">
+                                        <input class="field__input" placeholder="99xxxxxxxx" name="contactNumber"ng-model="UserName" id="contactNumber">
+                                        <span class="field__label-wrap">
+                                            <span class="field__label">
+                                                User Name <span style="color: #E76886;">*</span>
+                                            </span>
+                                        </span>
+
+                                    </label>
+                                    <div id="errorNumber" class="error">
+                                       User Name is required
+                                    </div>
+                                    <div id="errorIfNotNumber" class="error">
+                                        Mobile number should be numeric
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 eachFormField">
+                                    <label class="field a-field a-field_a3 page__field">
+                                        <input class="field__input" placeholder="Password" ng-model="Password" name="password" id="pwd">
+                                        <span class="field__label-wrap">
+                                            <span class="field__label">
+                                                Password <span style="color: #E76886;">*</span>
+                                            </span>
+                                        </span>
+
+                                    </label>
+                                    <div id="errorNumber" class="error">
+                                        Password is required
+                                    </div>
+                                    <!--<div id="errorIfNotNumber" class="error">
+                                        Password should be numeric
+                                    </div>-->
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="row">
+
+                                <button class="loginBtn loginBtn--google">
+                                    Login with Google
+                                </button>
+                            </div>
+
+
+
+                            <div class="row">
+                                <button class="loginBtn loginBtn--facebook">
+                                    Login with Facebook
+                                </button>
+                            </div>
+                            <div class="row">
+                                <div class="button-container col-lg-12">
+                                    <button class="button"ng-click="Login(UserName,Password)"style="margin: 0;">Login 
+                                        
+                                    </button>
+                                </div>
+                            </div>
+
+
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+    </div>
+
+
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</body>
+
+</html>

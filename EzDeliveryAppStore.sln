@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EzDeliveryAppStore", "EzDeliveryAppStore\EzDeliveryAppStore.csproj", "{98A00734-E9DC-4CEB-9E73-6AEB228CAAE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroUi", "HeroUi\HeroUi.csproj", "{D60F2F3A-D0E6-446B-843F-47BBF37BD860}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98A00734-E9DC-4CEB-9E73-6AEB228CAAE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A00734-E9DC-4CEB-9E73-6AEB228CAAE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A00734-E9DC-4CEB-9E73-6AEB228CAAE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A00734-E9DC-4CEB-9E73-6AEB228CAAE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D60F2F3A-D0E6-446B-843F-47BBF37BD860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D60F2F3A-D0E6-446B-843F-47BBF37BD860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D60F2F3A-D0E6-446B-843F-47BBF37BD860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D60F2F3A-D0E6-446B-843F-47BBF37BD860}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9267CB8-F74A-493F-9F87-F88887F1B24A}
+	EndGlobalSection
+EndGlobal

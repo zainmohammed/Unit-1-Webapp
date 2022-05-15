@@ -1,0 +1,180 @@
+
+    .swiper-container {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 62px;
+      background-color: white;
+      height: 100%;
+      margin-top: 5em;
+      margin-bottom: 4em;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+
+    }
+    .swiper-slide .imgbox img{
+                height:300px;
+}
+.swiper-slide .details{
+    box-sizing: border-box; 
+    color:black;
+    font-size: 16px;
+    margin-top:-23px;
+    text-align:center;
+    background-color: white;
+    
+}
+
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+
+
+
+.tab_block{
+    margin-top:2em;
+    margin-bottom:3em;
+}
+.tab {
+  float: left;
+  border: 1px solid #fff;
+  background-color: #fff;
+  width: 30%;
+  height: 300px;
+  margin-bottom:2em;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: white;
+  color:  #4BC25A ; /*#9B9D9F; */
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.tab button img{
+    height:20px;
+    margin-right: 1em;
+}
+
+.tab button img :hover{
+  fill:white;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color:#1e3e22;
+  color:white;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #b8f7c0;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+ 
+  width: 100%;
+  border-left: none;
+  height: 100%;
+}
+
+
+.tabcontent .offer_box{
+
+
+float: left;
+width: 207px;
+margin-top: 2em;
+/* height: 110%; */
+margin-left: 2em;
+}
+.tabcontent .offer_box .offer_box_content{
+  background-color: white;
+ border:1px solid #4BC25A;
+}
+
+
+
+    .tabcontent .offer_box .offer_box_content img {
+        height: 100%;
+        width: 100%;
+        margin-left: 0em;
+        margin-top: 0em;
+        margin-bottom: 0em;
+    }
+
+
+
+.tabcontent .offer_box .offer_box_content .p_content{
+
+  color:#4BC25A;
+  font-size:10px;
+  margin-left:8px;
+}
+
+
+
+.tabcontent .offer_box .offer_box_content .view{
+  color: #4BC25A;
+  background-color: white;
+  border: none;
+  width: 74%;
+  border-top: 1px solid #4BC25A;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom:6px;
+}
+
+
+
+
+/* ribbon */
+#ribbon{
+  background:#4BC25A;
+  height: 30px;
+  width:auto;
+  display: inline-block;
+  margin:8px auto;
+  position: relative;
+  color:#FFF;
+  line-height: 30px;
+  padding:0px 20px;
+}
+
+#ribbon:after{
+  content:"";
+  height:0;
+  width: 0;
+  top:0px;
+  right:-30px;
+  position: absolute;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid  #4BC25A;
+}
+
+#ribbon:before{
+  content:"";
+  height:0;
+  width: 0;
+  top:0px;
+  right:-30px;
+  position: absolute;
+  border-style: solid;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid  #4BC25A;
+}

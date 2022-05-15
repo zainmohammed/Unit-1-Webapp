@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Arif\Hero Publish\08-23-2019HeroV2</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/HeroUi.dll">
+      <publishTime>08/23/2019 15:38:10</publishTime>
+    </File>
+    <File Include="bin/HeroUi.pdb">
+      <publishTime>08/23/2019 15:38:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>05/24/2018 13:38:22</publishTime>
+    </File>
+    <File Include="css/admin.css">
+      <publishTime>08/23/2019 11:46:43</publishTime>
+    </File>
+    <File Include="css/animate.min.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/Bids.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/bussiness.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/bussinessfooter.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/bussinessform.css">
+      <publishTime>08/09/2019 19:14:44</publishTime>
+    </File>
+    <File Include="css/category.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/custom.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/elegant_font/elegant_font.min.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/elegant_font/elegant_font/HTML CSS/fonts/ElegantIcons.eot">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/elegant_font/elegant_font/HTML CSS/fonts/ElegantIcons.svg">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/elegant_font/elegant_font/HTML CSS/fonts/ElegantIcons.ttf">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/elegant_font/elegant_font/HTML CSS/fonts/ElegantIcons.woff">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/elegant_font/elegant_font/HTML CSS/index.html">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/elegant_font/elegant_font/HTML CSS/lte-ie7.js">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/elegant_font/elegant_font/HTML CSS/style.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/fontello/css/fontello.min.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/fontello/font/fontello.woff">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/footer.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/form.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/home.css">
+      <publishTime>08/20/2019 12:36:12</publishTime>
+    </File>
+    <File Include="css/index.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/magnific-popup.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/menu.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/New folder/validate.js">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/offer.css">
+      <publishTime>08/08/2019 21:59:12</publishTime>
+    </File>
+    <File Include="css/OrderDetail.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/partner.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/partnerfom.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/pop_up.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/responsive.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/responsiveindex.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/restaurentpage.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/senpackage.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>08/09/2019 16:55:48</publishTime>
+    </File>
+    <File Include="css/stylesheet.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/sweetalert2.min.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/swiper.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="css/swiper.min.css">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="Hero.js">
+      <publishTime>08/23/2019 11:32:47</publishTime>
+    </File>
+    <File Include="img/1.jpg">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="img/1.png">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="img/arrow_down.svg">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="img/bg_office.jpg">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="img/cards.png">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="img/delivery-men.jpg">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="img/delivery.jpg">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="img/DHL_2_Camera_1058-767x511.jpg">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="img/dots_vert.png">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="img/ez.jpg">
+      <publishTime>08/05/2019 16:47:09</publishTime>
+    </File>
+    <File Include="img/icon_ccv.gif">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/icon_home_1.svg">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/icon_home_2.svg">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/icon_home_3.svg">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/icon_home_4.svg">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/logo.png">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/maps.jpg">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/paypal.svg">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/ribbon_complete.png">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/ribbon_popular - Copy.png">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/ribbon_request.png">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/search.svg">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/time_panel.svg">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="img/wallet.png">
+      <publishTime>08/05/2019 16:47:10</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>08/22/2019 19:25:25</publishTime>
+    </File>
+    <File Include="js/common_scripts_min.js">
+      <publishTime>08/05/2019 16:47:27</publishTime>
+    </File>
+    <File Include="js/functions.js">
+      <publishTime>08/05/2019 16:47:27</publishTime>
+    </File>
+    <File Include="js/jquery-2.2.4.min.js">
+      <publishTime>08/05/2019 16:47:27</publishTime>
+    </File>
+    <File Include="js/jquery.cookiebar.js">
+      <publishTime>08/05/2019 16:47:27</publishTime>
+    </File>
+    <File Include="js/tabs.js">
+      <publishTime>08/05/2019 16:47:27</publishTime>
+    </File>
+    <File Include="ngViews/Hero/DeliveryHeroRegistration.html">
+      <publishTime>08/05/2019 16:47:49</publishTime>
+    </File>
+    <File Include="ngViews/Hero/DeliveryHeroRegistration.js">
+      <publishTime>08/05/2019 16:47:49</publishTime>
+    </File>
+    <File Include="ngViews/Hero/HeroDashboard.html">
+      <publishTime>08/23/2019 12:09:46</publishTime>
+    </File>
+    <File Include="ngViews/Hero/HeroDashBoard.js">
+      <publishTime>08/22/2019 19:27:25</publishTime>
+    </File>
+    <File Include="ngViews/Hero/HeroDashboardComplete.html">
+      <publishTime>08/23/2019 12:10:28</publishTime>
+    </File>
+    <File Include="ngViews/Hero/HeroDashboardComplete.js">
+      <publishTime>08/22/2019 17:14:35</publishTime>
+    </File>
+    <File Include="ngViews/Hero/HeroLogin.html">
+      <publishTime>08/22/2019 23:07:49</publishTime>
+    </File>
+    <File Include="ngViews/Hero/HeroLogin.js">
+      <publishTime>08/18/2019 20:31:28</publishTime>
+    </File>
+    <File Include="ngViews/Hero/OrderDetails.html">
+      <publishTime>08/20/2019 16:37:02</publishTime>
+    </File>
+    <File Include="ngViews/Hero/OrderDetails.js">
+      <publishTime>08/07/2019 00:01:54</publishTime>
+    </File>
+    <File Include="ngViews/Hero/RejectedList.html">
+      <publishTime>08/23/2019 12:10:44</publishTime>
+    </File>
+    <File Include="ngViews/Hero/RejetedOrderList.js">
+      <publishTime>08/22/2019 20:50:50</publishTime>
+    </File>
+    <File Include="Scripts/angular-cookies.min.js">
+      <publishTime>08/05/2019 17:38:09</publishTime>
+    </File>
+    <File Include="Scripts/angular-moment-picker.min.js">
+      <publishTime>08/05/2019 18:01:48</publishTime>
+    </File>
+    <File Include="Scripts/angular-route.min.js">
+      <publishTime>08/05/2019 17:39:27</publishTime>
+    </File>
+    <File Include="Scripts/angular.js">
+      <publishTime>08/05/2019 17:38:09</publishTime>
+    </File>
+    <File Include="Scripts/angular.min.js">
+      <publishTime>08/05/2019 17:38:09</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.min.js">
+      <publishTime>08/05/2019 17:38:09</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>08/05/2019 17:38:09</publishTime>
+    </File>
+    <File Include="Scripts/dirPagination.js">
+      <publishTime>08/05/2019 17:38:09</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.min.js">
+      <publishTime>08/05/2019 17:38:09</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min.js">
+      <publishTime>08/05/2019 17:38:09</publishTime>
+    </File>
+    <File Include="Scripts/moment.js">
+      <publishTime>08/05/2019 18:04:30</publishTime>
+    </File>
+    <File Include="Scripts/script.min.js">
+      <publishTime>08/05/2019 17:38:09</publishTime>
+    </File>
+    <File Include="Scripts/sweetalert.script.js">
+      <publishTime>08/05/2019 18:50:09</publishTime>
+    </File>
+    <File Include="Scripts/sweetalert2.min.js">
+      <publishTime>08/05/2019 18:50:18</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/09/2019 11:53:48</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

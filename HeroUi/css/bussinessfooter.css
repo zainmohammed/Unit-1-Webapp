@@ -1,0 +1,128 @@
+
+
+
+.footer {
+    margin-top: 17em;
+}
+
+    .footer .grey_box_footer {
+        height: 40%;
+        width: 100%;
+        background-color: #CBCBCB;
+    }
+
+
+
+
+
+        .footer .grey_box_footer .logo_footer img {
+            height: 115px;
+            width: 140px;
+            margin-left: 20px;
+            margin-top: 12px;
+        }
+
+.copyright {
+    background-color: #4BC25A;
+    height: 50%;
+}
+
+
+    .copyright .green_bg_ft1 {
+        color: white;
+        font-size: 13px;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+
+.footer .grey_box_footer .icons_ft.social_icons1 ul {
+    margin-left: 20em;
+    list-style-type: none;
+    float: left;
+}
+
+.footer .grey_box_footer .icons_ft .social_icons1 li {
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    padding-left: 20px;
+}
+
+
+.footer .grey_box_footer .icons_ft .social_icons1 img {
+    height: 27px;
+    width: 30px;
+    margin-top: 2em;
+}
+
+
+.footer .grey_box_footer .icons_ft .menu_footer ul {
+    margin-bottom: 0em;
+    margin-top: -2em;
+    list-style-type: none;
+    float: left;
+}
+
+.footer .grey_box_footer .icons_ft .menu_footer li {
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 44px;
+    margin-top: 4em;
+}
+
+    .footer .grey_box_footer .icons_ft .menu_footer li a {
+        color: #4BC25A;
+        text-decoration: none;
+    }
+
+        .footer .grey_box_footer .icons_ft .menu_footer li a:hover {
+            color: grey;
+            text-decoration: none;
+        }
+
+
+@media screen and ( max-width: 640px) {
+
+    .copyright {
+        display: none;
+    }
+
+        .copyright .green_bg_ft1 {
+            display: none;
+        }
+
+    .walking_footer {
+        display: none;
+    }
+
+    .footer .grey_box_footer .icons_ft .menu_footer ul {
+        margin-left: -2em;
+    }
+
+    .footer .grey_box_footer .icons_ft .menu_footer li {
+        padding-left: 0px;
+        padding-right: 10px;
+        margin-top: 4em;
+        font-size: 8px;
+    }
+
+    .footer .grey_box_footer .logo_footer img {
+        height: 77px;
+        width: 95px;
+        margin-left: -14px;
+        margin-top: 12px;
+    }
+
+    .footer .grey_box_footer .icons_ft .social_icons1 li {
+        list-style-type: none;
+        float: left;
+        text-align: center;
+        padding-left: 15px;
+        margin-left: -10px;
+    }
+}

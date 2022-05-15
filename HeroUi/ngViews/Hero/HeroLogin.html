@@ -1,0 +1,21 @@
+﻿
+
+<div class="" id="" tabindex="-1" role="" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog" style=" top: 70px;">
+        <div class="modal-content modal-popup">
+
+            <form class="popup-form" name="HeroLoginForm" autocomplete="off" novalidate>
+                <div class="login_icon"><img src="../../img/logo.png" style="width: 150px;"></div>
+                <input type="number" class="form-control form-white" name="number" placeholder="Mobile Number" ng-model="MobileNo" required>
+                <p ng-show="submitted==true && HeroLoginForm.number.$error.required"><b style="color:darkred">*Please Enter Mobile Number</b></p>
+                <!--<input type="text" class="form-control form-white" placeholder="Password" ng-model="Password">-->
+                <!--<div class="text-left">
+            <p><b style="color:brown">*Disclaimer : </b>Notification will be sent on this mobile number.</p>
+        </div>-->
+                <button type="submit" class="btn btn-submit" ng-click="submitted=true;HeroLogin(MobileNo,HeroLoginForm.$valid)">Login</button>
+            </form>
+            <h5><b style="color:White">*To Register Hero/Driver Please Contact Mr Bilal: +91 90004 82228</b></h5>
+        </div>
+    </div>
+</div>
+

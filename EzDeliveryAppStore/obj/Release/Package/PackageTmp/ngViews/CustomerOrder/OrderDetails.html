@@ -1,0 +1,218 @@
+﻿
+<style>
+    .eachFormField {
+        margin-top: 2em;
+    }
+    
+        .tagline1 {
+    color: #4BC25A;
+    font-size: 13px;
+    margin-top: -1em;
+    /* position: absolute; */
+    text-decoration: underline;
+    top: 67%;
+    left: 21%;
+    margin-left: 5em;}
+</style>
+
+
+
+
+<div class="container-fluid" id="container-fluid">
+    <section>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                <div class="col-lg-6 logo_field">
+                    <a href="home.html" class="logo  logo_field">
+                        <figure>
+                            <img src="../../../images/logo.png">
+                            <span style="color:#4BC25A;font-size:25px;font-weight:bold;"> Ezy Delivery</span>
+                            <p class="tagline1"> Make Your Life Ezy </p>
+                        </figure>
+                    </a>
+                </div>
+
+                <!--<div class="col-lg-3">
+        <label class="field a-field a-field_a3 page__field length_increase">
+            <input class="field__input" placeholder="Search" name="Search" id="Search" style="padding-right: 29px; border:2px solid #cec6c6;color:#cec6c6;">
+            <span class="field__label-wrap">
+                <span class="field__label " style="color:green;">
+                    Search
+                </span>
+            </span>
+
+        </label>
+        <div id="errorNumber" class="error">
+            Search
+        </div>
+    </div>
+    <div class="col-lg-2">
+        <figure>
+            <img src="../../../images/discount.svg" style="    height: 30px;
+                    margin-top: 2em;">
+        </figure> <span style="color: #4BC25A;
+                margin-top: -24px;
+                position: absolute;
+                margin-left: 4em;">Offer</span>
+    </div>-->
+
+                <div class="col-lg-6">
+
+                    <button class="login_s pull-right" ng-show="AuthCust!='false'">
+                        <a href="/Logout">
+                            Logout
+                        </a>
+                    </button>
+                    <button class="login_s pull-right">
+                        <a href="MyOrder">
+                            My Order
+                        </a>
+                    </button>
+                    <button class="login_s pull-right">
+                        <a href="CustomerOrder.html">
+                             Order
+                        </a>
+                    </button>
+                    <button class="login_s pull-right">
+                        <a href="/Home">
+                            Home
+                        </a>
+                    </button>
+
+                </div>
+                    <!--<div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <button class="login_s pull-right">
+                    <a href="Login">
+                        LogOut
+                    </a>
+                </button>
+
+
+            </div>
+
+        </div>-->
+
+
+                </div>
+            </div>
+
+    </section>
+
+
+    <section>
+        <div class="row">
+            <div class="col-lg-12 col-md-4 col-xs-6 col-sm-6" style="margin-top:6em;">
+
+                <div id="London" class="tabcontent">
+                    <div class="offer_box" ng-repeat=" c in TopBidsLst">
+                        <div class="offer_box_content">
+
+                            <figure>
+                                <img src="../../images/capDefault.jpeg" />
+                            </figure>
+                            <div class="p_content">
+                                <h3>{{c.HeroRegistration.HeroName}}</h3>
+                                <p>{{c.HeroRegistration.PlateNo}}</p>
+                                <p>{{c.CustomerOrder.CustomerOrderNo}}</p>
+                                <p>{{c.DeliveryNotes}}</p>
+                                <p> {{c.DeliveryStartTime}} </p>
+                                <h4 ng-if="c.Status == 1 || c.Status ==2">{{c.BidPrice | currency:'&#x20B9;' }}</h4>
+                            </div>
+
+                            <button class="view" ng-show="c.Status == 1 || c.Status ==2">
+                                <a href="javscript:void(0);" ng-click="CustomerAcceptsBid(c.CustomerOrderId,c.OrderDriverId)">Accept  </a>
+                            </button>
+                           
+                            <button class="view">
+                                <a href="javscript:void(0);" ng-click="CustomerRejectBid(c.CustomerOrderId,c.OrderDriverId)"> Reject </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="row">
+            <div class="col-lg-12 grey_box_footer">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-xs-12 col-sm-12">
+
+                        <div class="logo_footer">
+                            <a href="home.html"><img src="../../../images/logo.png"> </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7  col-md-12 col-sm-12 col-xs-12 icons_ft">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 social_icons1" style="/* margin-left: 0em; */  ">
+                                    <ul class="icons1">
+                                        <li>
+                                            <img src="../../../images/facebook.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../../images/twitter.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../../images/whatsapp.png">
+                                        </li>
+                                        <li>
+                                            <img src="../../../images/gmail (1).png">
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu_footer">
+                                    <ul>
+                                        <li>
+                                            <a href=""> About </a>
+                                        <li>
+                                            <a href=""> Careers </a>
+
+                                        </li>
+                                        <li>
+                                            <a href=""> Terms & Conditions </a>
+
+                                        </li>
+                                        <li>
+                                            <a href=""> privacy Policy </a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12">
+                        <div class="row">
+
+                            <div class="walking_footer pull-right">
+                                <img src="../../../images/walking.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="copyright">
+        <div class="row"  style="background-color:#4BC25A">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+
+                <div class="green_bg_ft1">
+                    <p> Atozee Solutions @2019</p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+</div><!-- container div close-->
+
+

@@ -1,0 +1,139 @@
+﻿<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+        a:hover {
+            color: rgb(80, 69, 69);
+            text-decoration: none;
+        }
+</style>
+<div>
+    <div class="container-fluid" id="container">
+        <section>
+            <div class="visiting-card">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12 left-col">
+                                <div class="login_image">
+                                    <img src="../../../images/walking.svg">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 right-col">
+
+                                <form  novalidate name="RegisterForm" autocomplete="off">
+                                    <div class="logo_img">
+                                        <img src="../../../images/logo.png">
+                                    </div>
+                                    <h2 style="margin-bottom: 10px;color:#4BC25A;">Register</h2>
+                                    <p class="subHeading" style="margin-bottom: 15px;">
+                                        <span style="color: #E76886;">*</span> Indicates mandatory fields
+                                    </p>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 eachFormField">
+                                            <label class="field a-field a-field_a3 page__field">
+                                                <input type="number" class="field__input" placeholder="99xxxxxxxx" ng-model="obj.MobileNo" name="mobilenumber" ng-pattern="/^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/" required />
+                                                <p ng-show="submitted==true && RegisterForm.mobilenumber.$error.required"><b style="color:brown">*Mobile No Is Required</b></p>
+                                                <p ng-show="submitted==true && RegisterForm.mobilenumber.$error.pattern"><b style="color:brown">*Start With 0 Or 91 Max 10 </b></p>
+                                            </label>
+                                           
+                                        </div>
+
+                                        <p><b style="color:brown">*Disclaimer : </b>Notification will be sent on this mobile number.</p>
+                                    </div>
+
+                                    <!--<div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 eachFormField">
+                                            <label class="field a-field a-field_a3 page__field">
+                                                <input type="password" class="field__input" placeholder="Enter Your Password" ng-model="obj.Password" name="password" required>
+
+                                                <span class="field__label-wrap">
+                                                    <span class="field__label">
+                                                        Enter Your Choice Password <span style="color: #E76886;">*</span>
+                                                    </span>
+                                                </span>
+
+                                            </label>
+                                            <div id="errorNumber" class="error">
+                                                Password is required
+                                            </div>
+                                            <div id="errorIfNotNumber" class="error">
+                                                number should be numeric
+                                            </div>
+                                        </div>
+                                    </div>-->
+
+
+                                    <!--<div class="row">
+
+                                        <button class="loginBtn loginBtn--google">
+                                            Login with Google
+                                        </button>
+                                    </div>
+
+                                    <div class="row">
+                                        <button class="loginBtn loginBtn--facebook">
+                                            Login with Facebook
+                                        </button>
+                                    </div>-->
+
+                                    <div class="row">
+                                        <div class="button-container col-lg-12">
+                                            <button class="button" type="submit" ng-click="submitted=true;VerifyMobileNo(obj,RegisterForm.$valid)" style="margin:0" ;>
+                                                Register
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    
+
+                                    <!-- Modal -->
+
+
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <button type="button" id="OtpModelForReg" style="display:none" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"  data-backdrop="static">Open Modal</button>
+    </div>
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">OTP</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Enter OTP Code:</label>
+                        <p><b style="color:brown">*OTP: </b>Please Enter OTP as<b style="color:brown"> 1 1 1 1 </b> </p>
+                        <input type="text" class="form-control" id="recipient-name" ng-model="obj.OTP">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="submitted=true;CreateCustomer(obj)">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>

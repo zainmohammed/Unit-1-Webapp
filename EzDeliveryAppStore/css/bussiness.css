@@ -1,0 +1,134 @@
+
+
+
+
+.busines_form_box{
+margin-top:10em;
+}
+
+.bussiness_page_1 {
+    margin-top:2em;
+    position: relative;
+}
+
+
+
+.bussiness_page_1 .Girl_picture img{
+    
+    height:540px;
+    overflow: hidden;
+}
+.Girl_picture{
+  
+   
+}
+/*.bussiness_page_1 .Girl_picture1{
+    content: '';
+
+    overflow: hidden;
+    position: absolute;
+    border-radius: 94%;
+    height: 400px;
+    width: 700px;
+    background: #4BC25A;
+   
+    transform: rotate(22deg);
+    top: 11%;
+    box-sizing: content-box;
+    right: -18%;
+    box-shadow: 1px 2px 22px #4BC25A;
+
+}
+ */
+
+ .bussiness_page_1 .Girl_picture1{
+     overflow: hidden;
+ }
+ .bussiness_page_1 .Girl_picture1 img{
+     height:auto;
+     margin-top:10em;
+  
+     margin-left:2em;
+    
+  
+     width:700px;
+ }
+
+
+
+ .bussiness_page_1 .Girl_picture1 h4{
+    z-index: 999999999999;
+    position: absolute;
+    top: 54%;
+    left: 33%;
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+    line-height: 1.6;
+ }
+
+
+ .bussiness_box:hover {
+    transform: scale(1.1);
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;}
+
+
+ .bussiness_box_sec{
+    
+     margin-top:3em;
+    margin-bottom:2em;
+ }
+ 
+ .bussiness_box_sec .bussiness_box{
+     margin-top:3em;
+    float:left;
+    
+     height:120px;
+ }
+ .bussiness_box_sec .bussiness_box .content_box{
+ 
+     width: 290px;
+     height: 80%;
+     border-radius: 10px;
+     margin-left: 9em;
+     margin-top: 5em;
+     background-color: #4BC25A;
+ }
+ .bussiness_box_sec .bussiness_box .content_box img{
+     height: 43px;
+     width: 101px;
+     margin-left: 0em;
+     margin-top: 2em;
+ }
+ 
+ .bussiness_box_sec .bussiness_box .content_box p{
+     font-size: 12px;
+     color: #fff;
+     font-weight: bold;
+     line-height: 1.6;
+     margin-left: 9em;
+     margin-top: -3em;
+ }
+ .just_img .green_bg h3{
+   
+        color: #ffffff;
+        top: 18%;
+        font-weight: bold;
+        position: absolute;
+        z-index: 99999999999999999;
+    
+
+ }
+
+ .busines_form_box {
+     position: relative;
+ }
+ .busines_form_box .just_img {
+     
+ }
+ .busines_form_box .just_img .green_bg {
+ }

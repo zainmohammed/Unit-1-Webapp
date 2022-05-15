@@ -1,0 +1,203 @@
+﻿<style>
+    .input-AmountField {
+        position: relative;
+        margin-left: 1em;
+        width: 28em !important;
+        border: 1px solid #ddd;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .input-AmountField {
+            width: 19em !important;
+        }
+    }
+</style>
+<header style="    background-color: white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col--md-4 col-sm-4 col-xs-4">
+                <a href="index.html" id="logo">
+                    <img src="img/logo.png" width="100" height="auto" alt="" data-retina="true" class="hidden-xs" style="    margin-top: -10px;">
+                    <img src="img/logo.png" width="59" height="" alt="" data-retina="true" class="hidden-lg hidden-md hidden-sm">
+                </a>
+            </div>
+
+
+
+            <nav class="col--md-8 col-sm-8 col-xs-8">
+                <div class="header__notification">
+                    <div class="fa fa-bell-o bell-icon small-icon" style="color: #3d9f4a;font-size: 23px;">
+                        <span class="notification-number bell-number">3</span>
+                        <ul class="notification__list dropdown hide" style="    padding: 0;">
+                            <h3 class="notification__list__name">
+                                Notifications
+                                <span class="notification-number large-number">3</span>
+                            </h3>
+                            <li class="list__item">
+                                <a href="Order-Details.html" class="list__item--link">
+                                    <img src="https://cdn.tutsplus.com/net/uploads/legacy/213_chris/ChrisThumbnail.jpg" alt="" class="user-image" />
+                                    <span class="messages">
+                                        Tolichowki to Mahdipatnam
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="Order-Details.html" class="list__item--link">
+                                    <img src="https://cdn.tutsplus.com/net/uploads/legacy/213_chris/ChrisThumbnail.jpg" alt="" class="user-image" />
+                                    <span class="messages">
+                                        Tolichowki to Mahdipatnam
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="Order-Details.html" class="list__item--link">
+                                    <img src="https://cdn.tutsplus.com/net/uploads/legacy/213_chris/ChrisThumbnail.jpg" alt="" class="user-image" />
+                                    <span class="messages">
+                                        Tolichowki to Mahdipatnam
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> <!-- bell-icon-->
+
+                </div>
+
+            </nav>
+        </div><!-- End row -->
+    </div><!-- End container -->
+</header>
+
+
+<div class="collapse" id="collapseMap">
+    <!--<div id="map" class="map"></div>-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.343121104416!2d78.41618061487642!3d17.395313588073893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb96e60203fdb1%3A0xf33fa391c0f2d02!2sAtoZeeSolutions!5e0!3m2!1sen!2sin!4v1564842210595!5m2!1sen!2sin" width="800" height="600" frameborder="0" style="    height: 322px;" allowfullscreen></iframe>
+</div>
+<!-- Content ================================================== -->
+<div class="container margin_60_35">
+    <div class="row">
+        <div class="col-md-4">
+            <p>
+                <a class="btn_map" data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap">View on map</a>
+            </p>
+            <div class="box_style_2 info">
+
+
+                <h4 class="nomargin_top">Delivery order <i class="far fa-clock" aria-hidden="true"></i></h4>
+
+                <p><b>Customer Order No : </b> {{OrderDetails.CustomerOrderNo}} </p>
+                <p> <b> Pickup Point: </b>{{OrderDetails.PickUpAddress}}</p>
+                <p><b>Delivery Point</b>  {{OrderDetails.DeliveryAddress}}</p>
+                <p><b>Category</b>   {{OrderDetails.CategoryNameEn}}</p>
+                <p> <b> Order Status: </b></p>
+                <p><b>Customer Name: </b> </p>
+                <p> <b> Mobile No: </b>{{orderDetails.DriverMobileNumber}}</p>
+
+                <hr>
+                <h4>Notes for the Customer:---- </h4>
+                <p>
+                    {{OrderDetails.OrderDetailText}}
+                </p>
+            </div><!-- End box_style_1 -->
+
+            <div class="box_style_2 hidden-xs" id="help">
+                <i class="fa fa-life-ring"></i>
+                <h4>Need <span>Help?</span></h4>
+                <a href="tel://004542344599" class="phone">+45 423 445 99</a>
+                <small>Monday to Friday 9.00am - 7.30pm</small>
+            </div>
+
+        </div><!-- End col-md-3 -->
+
+        <div class="col-md-5">
+            <div class="box_style_2" id="order_process">
+                <h2 class="inner">Accept Customer order </h2>
+                <!--<div class="form-group">
+                    <label>Enter Order Amount </label>
+                    <input type="text" class="form-control" id="lastname_order" name="lastname_order" placeholder="&#x20B9;" ng-model="OrderDetails.BidPrice">
+                </div>-->
+
+                <div class="form-group">
+
+                    <label>Enter Order Amount </label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="position: absolute;
+    margin-left: 0em;
+    margin-top: 1em;
+">₹</span>
+                        </div>
+                        <input type="text" class="form-control input-AmountField" aria-label="Amount (to the nearest dollar)" ng-model="OrderDetails.BidPrice" style="
+
+    border: 1px solid #ddd;">
+                        <div class="input-group-append">
+                            <span class="input-group-text" style="position: absolute;
+      margin-left: 0em;
+      margin-top: 1em;">.00</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label><i class=" icon-clock"></i> Time (minutes)</label>
+                    <input type="text" class="form-control" id="request" ng-model="OrderDetails.Time" name="usr_time" placeholder="Enter Minutes here" />
+                </div>
+
+                <hr>
+
+
+
+
+
+                <hr>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Notes for the Customer</label>
+                        <textarea class="form-control" style="height:150px" placeholder="Ex. Allergies, cash change..." name="notes" id="notes" ng-model="OrderDetails.DeliveryNotes"></textarea>
+                    </div>
+                </div>
+
+            </div><!-- End box_style_1 -->
+            <a class="btn_full" href="Order-Tracking.html" ng-click="DriverBidsOrder(OrderDetails)">Accept Order</a>
+            <a class="btn_full" href="#" data-toggle="modal" data-target="#cancel" style="background-color: #5f2c2c;">Cancel Order</a>
+        </div><!-- End col-md-6 -->
+
+        <div class="col-md-3" id="sidebar">
+            <div class="theiaStickySidebar">
+                <div id="cart_box">
+                    <h3> Delivery Info <i class="icon_cart_alt pull-right"></i></h3>
+                    <p> <b> Name: </b>{{CustomerDetails.HeroName}}</p>
+                    <p> <b> Mobile No: </b>{{OrderDetails.DriverMobileNumber}}</p>
+                </div><!-- End cart_box -->
+            </div><!-- End theiaStickySidebar -->
+        </div><!-- End col-md-3 -->
+
+    </div><!-- End row -->
+</div><!-- End container -->
+<!-- The Modal -->
+<div class="modal fade" id="cancel">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Cancel Order</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <label>Notes for the Canceling Order</label>
+                <textarea class="form-control" style="height:150px" placeholder="Ex. Ression why Cancling order, ..." name="cancel" id="cancel"></textarea>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+            </div>
+
+        </div>
+    </div>
+</div>

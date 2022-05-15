@@ -1,0 +1,328 @@
+﻿
+<style>
+    .eachFormField {
+        margin-top: 2em;
+    }
+
+    .tagline1 {
+        color: #4BC25A;
+        font-size: 13px;
+        margin-top: -1em;
+        /* position: absolute; */
+        text-decoration: underline;
+        top: 67%;
+        left: 21%;
+        margin-left: 5em;
+    }
+
+
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        color: #232323;
+        background-color: #f2f3f5;
+    }
+
+    *,
+    *:after,
+    *:before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .timeline {
+        width: 100%;
+        height: 100px;
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+        .timeline .events {
+            position: relative;
+            background-color: #4bc25a;
+            height: 3px;
+            width: 100%;
+            border-radius: 4px;
+            margin: 5em 0;
+        }
+
+            .timeline .events ol {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+            .timeline .events ul {
+                list-style: none;
+            }
+
+                .timeline .events ul li {
+                    display: inline-block;
+                    width: 15.65%;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                    .timeline .events ul li a {
+                        font-family: 'Poppins', sans-serif;
+                        /* font-style: italic; */
+                        font-size: 16px;
+                        color: #606060;
+                        text-decoration: none;
+                        position: relative;
+                        top: -23px;
+                    }
+
+
+                        .timeline .events ul li a:after {
+                            content: '';
+                            position: absolute;
+                            bottom: -25px;
+                            left: 50%;
+                            right: auto;
+                            height: 20px;
+                            width: 20px;
+                            border-radius: 50%;
+                            border: 3px solid #606060;
+                            background-color: #fff;
+                            transition: 0.3s ease;
+                            transform: translateX(-50%);
+                        }
+
+                        .timeline .events ul li a:hover::after {
+                            background-color: #4bc25a;
+                            border-color: grey;
+                        }
+
+                        .timeline .events ul li a.selected:after {
+                            background-color: #4bc25a;
+                            border-color: grey;
+                        }
+
+    .events-content {
+        width: 100%;
+        height: 100px;
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: left;
+    }
+
+        .events-content li {
+            display: none;
+            list-style: none;
+        }
+
+            .events-content li.selected {
+                display: initial;
+            }
+
+            .events-content li h2 {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                color: #919191;
+                font-size: 2.5em;
+            }
+
+
+
+    @media screen and (max-width: 768px) {
+
+
+
+        .timeline {
+            width: 80%;
+        }
+
+            .timeline .events ul li {
+                width: 9.65%;
+            }
+
+                .timeline .events ul li a {
+                    font-size: 7px;
+                    top: -21px;
+                }
+    }
+
+
+    @media screen and (max-width: 567px) {
+        .timeline .events ul li a {
+            font-size: 5px;
+            top: -19px;
+        }
+    }
+
+    .whiteContainer1 {
+        padding: 30px;
+        background: #fff;
+        /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+        border-radius: 3px;
+        margin: 100px 49px 50px;
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+        .whiteContainer1 {
+            padding: 45px;
+            background: #fff;
+            /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+            border-radius: 6px;
+            margin: 100px 100px 50px;
+        }
+    }
+
+    @media screen and (max-width: 567px) {
+        .whiteContainer1 {
+            padding: 15px;
+            margin: 25px 0;
+        }
+    }
+    . Container1{
+        background-color:white;
+    }
+</style>
+<body>
+
+
+    <div header-Page>
+
+    </div>
+
+
+    <div class="container-fluid" id="container-fluid">
+
+       
+        <section class="whiteContainer1">
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 style="    padding: 4em;" class="status-text" >
+                            <a style="color: #3ea24c;font-size: 20px;" href="javscript:void(0);">We Are Finding Your Driver To Pickup Your Order....  </a>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-xs-6 col-sm-6" style="margin-top:6em;">
+
+                        <div id="London" class="tabcontent">
+                            <div class="offer_box" ng-repeat= "c in TopBidsLst ">
+                                <div class="offer_box_content">
+
+                                    <figure>
+                                        <img src="../../images/capDefault.jpeg" />
+                                    </figure>
+                                    <div class="p_content">
+                                        <h3 class="bid-card">{{c.HeroRegistration.HeroName}}</h3>
+                                        <p class="bid-card">{{c.HeroRegistration.PlateNo}}</p>
+                                        <p class="bid-card">{{c.CustomerOrder.CustomerOrderNo}}</p>
+                                        <p class="bid-card">{{c.DeliveryNotes}}</p>
+                                        <p class="bid-card"> {{c.DeliveryStartTime | date : 'mediumTime'}} </p>
+                                        <h4 class="bid-card">{{c.BidPrice | currency:'&#x20B9;' }}</h4>
+                                    </div>
+
+                                    <button class="button button1" style="width:97%;" ng-show="c.CustomerOrder.OrderStatusId == 1 || c.CustomerOrder.OrderStatusId ==2">
+                                        <a href="/OrderDetails/" ng-click="CustomerAcceptsBid(c.CustomerOrderId,c.OrderDriverId)">Accept  </a>
+                                    </button>
+
+
+                                    <button class="button button1 red" style="width:97%;" type="button" ng-show="c.CustomerOrder.OrderStatusId == 1 || c.CustomerOrder.OrderStatusId ==2">
+                                        <a href="javscript:void(0);" ng-click="CustomerRejectBid(c.CustomerOrderId,c.OrderDriverId)"> Reject </a>
+                                    </button>
+
+
+                                    <p class="view" ng-show="c.CustomerOrder.OrderStatusId == 3 ">
+                                        <b href="javscript:void(0);">Your Driver is On Way to Pickup The Order...  </b>
+                                    </p>
+                                    <p class="view" ng-show="c.CustomerOrder.OrderStatusId == 4 ">
+                                        <b href="javscript:void(0);">Your Order Delivery Started ...  </b>
+                                    </p>
+
+                                </div>
+                                <p class="view" ng-show="c.CustomerOrder.OrderStatusId == 5 ">
+                                    <b href="javscript:void(0);">Your Order Is Deliverd...Thank You  </b>
+                                </p>
+                                <p class="view" ng-show="c.CustomerOrder.OrderStatusId == 6 ">
+                                    <b href="javscript:void(0);"> Order Is Rejeted  </b>
+                                </p>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-8" style="margin-top:8em" ;>
+                        <div class="timeline">
+                            <div class="events">
+                                <ol>
+                                    <ul>
+                                        <li>
+                                            <a id="#0"ng-class="{selected:c.TopBidsLst == 2}">Bidding</a>
+                                        </li>
+                                        <li>
+                                            <a  id= ""ng-class="{selected:c.TopBidsLst == 3}">Bid Accepted</a>
+                                        </li>
+                                        <li>
+                                            <a id="#2">Philosophy</a>
+                                        </li>
+                                        <li>
+                                            <a id="#3">Legacy</a>
+                                        </li>
+                                        <li>
+                                            <a id="#4">Legacy</a>
+                                        </li>
+                                        <li>
+                                            <a id="#5">Legacy</a>
+                                        </li>
+
+                                    </ul>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="events-content">
+                            <ol>
+                                <li id="0" class="selected">
+
+
+                                </li>
+
+                                <li id="1">
+                                    <h2>Career</h2>
+                                    <p>new york times</p>
+                                </li>
+
+                                <li id="2">
+                                    <h2>Philosophy</h2>
+                                    <p>here</p>
+                                </li>
+
+
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+          
+        </section>
+       
+
+
+
+    </div><!-- container div close-->
+
+    <div footer-Page>
+
+    </div>
+
+</body>
+<button onclick="myFunction()">Try it</button>
+<script>
+function myFunction() {
+  document.getElementById("myRedDIV").style.order = "3";
+  
+}
+</script>

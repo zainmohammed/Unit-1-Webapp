@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html ng-app="EzDeliveryApp">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EzDeliveryApp</title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/angular-moment-picker.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/responsiveindex.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link href="css/home.css" rel="stylesheet" />
+    <link href="css/Bids.css" rel="stylesheet" />
+    <link href="css/bussinessfooter.css" rel="stylesheet" />
+
+
+
+    <link rel="stylesheet" href="css/bussiness.css">
+    <link rel="stylesheet" href="css/bussinessform.css">
+    <link href="css/offer.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/senpackage.css">
+
+
+    <link href="css/OrderDetail.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/OrderTrackingCss.css" rel="stylesheet" />
+    <link href="Content/sweetalert/sweetalert2.min.css" rel="stylesheet" />
+
+    <style>
+        .box-input {
+            box-shadow: 0 2px 5px 0 rgb(62, 160, 75), 0 2px 10px 0 rgba(0,0,0,.12);
+            padding: .84rem 2.14rem;
+        }
+
+        .mt-291 {
+            margin-top: 91px;
+        }
+
+        .center {
+            justify-content: center;
+            display: flex;
+        }
+
+        .mt-0 {
+            margin-top: 0px;
+        }
+
+        h2 {
+            color: #4AC259;
+        }
+
+        .dropzone {
+            height: 110px;
+            border: 4px dashed #3d9f4a;
+        }
+
+            .dropzone p {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 100px;
+                color: #5cb85c;
+                font-family: Arial;
+            }
+
+            .dropzone input {
+                position: absolute;
+                margin: 0;
+                padding: 0;
+                width: 88%;
+                height: 96%;
+                outline: none;
+                opacity: 0;
+            }
+
+            .dropzone button {
+                margin: 0;
+                color: #fff;
+                background: #16a085;
+                border: none;
+                width: 508px;
+                height: 35px;
+                margin-top: -20px;
+                margin-left: -4px;
+                border-radius: 4px;
+                border-bottom: 4px solid #117A60;
+                transition: all .2s ease;
+                outline: none;
+            }
+
+                .dropzone button:hover {
+                    background: #149174;
+                    color: #0C5645;
+                }
+
+                .dropzone button:active {
+                    border: 0;
+                }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container-fluid {
+            width: 100%;
+            overflow: hidden;
+            /*padding: 0;*/
+        }
+
+
+
+
+        .container {
+            /*padding: 0;*/
+            padding: 0;
+            width: 80%;
+        }
+
+        .tagline1 {
+            color: #4BC25A;
+            font-size: 13px;
+            margin-top: -3em !important;
+            /* position: absolute; */
+            text-decoration: underline;
+            top: 70%;
+            left: 25%;
+            margin-left: 11em !important;
+            /* margin-left: 74px!important; */
+        }
+
+
+
+        .footer {
+            margin-top: 5em;
+    </style>
+
+
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- G-font -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9de4aecd66.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+
+
+
+
+
+
+
+
+
+    <script src="Scripts/sweetalert.script.js"></script>
+    <script src="Scripts/sweetalert2.min.js"></script>
+    <script src="Scripts/swiper.min.js"></script>
+    <!---<script src="Scripts/offer.js"></script>-->
+    <script src="Scripts/map.js"></script>
+
+    <style>
+        .loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999999;
+            background-color: #fbfbfb;
+        }
+
+        .loader-image {
+            position: fixed;
+            top: 40%;
+            z-index: 999999999;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div loading="" class="loader" id="loader"
+         style="justify-content: center;display: inline-flex;overflow-x: hidden;">
+        <img class="loader-image" src="images/loader.gif" />
+    </div>
+    <div ng-view="">
+
+
+
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>-->
+<script src="Scripts/angular.min.js"></script>
+<script src="Scripts/angular-route.min.js"></script>
+<script src="Scripts/angular-cookies.min.js"></script>
+<script src="Scripts/moment.js"></script>
+<script src="Scripts/angular-moment-picker.min.js"></script>
+<script src="Scripts/dirPagination.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-animate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-aria.min.js"></script>
+
+
+
+<script src="EzDeliveryAppJs.js"></script>
+<script src="ngViews/AgentRegister/AgentRegistration.js"></script>
+<script src="ngViews/Directives/Header/header.js"></script>
+<script src="ngViews/Directives/Footer/footer.js"></script>
+<script src="ngViews/VendorRegistor/VendorRegistor.js"></script>
+<script src="ngViews/CustomerRegister/CustomerRegistration.js"></script>
+<script src="ngViews/Login/AgentLogin.js"></script>
+<script src="ngViews/Login/HeroLogin.js"></script>
+<script src="ngViews/Login/CustomerLogin.js"></script>
+<script src="ngViews/CustomerOrder/CustomerOrder.js"></script>
+<script src="ngViews/Bids/DriverBids.js"></script>
+<script src="ngViews/CustomerOrder/MyOrders.js"></script>
+<script src="ngViews/CustomerOrder/OrderDetails.js"></script>
+<script src="ngViews/CustomerOrder/OrderTracking.js"></script>
+<script src="ngViews/Hero/HeroLogin.js"></script>
+
+
+
+<!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8ORbNcU8WbywqjG23_tCAYS7iRlJhjno&libraries=places"
+        type="text/javascript"></script>-->
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeud_n5zh6dajaTn73lEBn4eOlwdoRsr4&libraries=places"
+        type="text/javascript"></script>
+

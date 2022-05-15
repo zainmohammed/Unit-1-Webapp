@@ -1,0 +1,69 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="table-responsive tbl-one">
+                <table class="table table-bordered bor-bot one-color">
+                    <thead>
+                        <tr>
+                            <th>Srno.</th>
+                            <th class="size-one">Customer Order Number</th>
+                            <th class="size-one">Order Size</th>
+                            <th>Order Weight</th>
+                            <th>Order ValueOfGood</th>
+
+
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr dir-paginate="c in myOrderLst | itemsPerPage:10 ">
+                            <td data-title="Srno.">{{$index+1}}</td>
+                            <td><a href="/OrderDetails/{{c.CustomerOrderId}}" type="button" class="btn btn-success btn-xs">{{c.CustomerOrderNo | limitTo : -6}}</a></td>
+                            <td>{{c.Size}}</td>
+                            <td>{{c.Weight}}</td>
+                            <td>{{c.ValueOfGood}}</td>
+
+                            <td>
+                                <!--<button href="#" type="button" class="btn btn-success btn-xs">Accept</button>-->
+                                <button href="#" type="button" class="btn btn-danger btn-xs" ng-click="CancelOrder(c.CustomerOrderId)">Cancel</button>
+
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- Table End -->
+            <div class="page-footer" style="background-color: #4bc25a;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <ul class="pager">
+                                <li><a href="#">Previous</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-8 text-center">
+                            <ul class="pagination pagination-sm">
+                                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <ul class="pager">
+                                <li><a href="#">Next</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

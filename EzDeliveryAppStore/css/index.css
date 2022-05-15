@@ -1,0 +1,234 @@
+
+.banner{
+    position: relative;
+    width: 100%;
+    height:auto;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .banner .nav .right_btn .bussines_btn {
+    position: absolute;
+    top: 5%;
+    right:9%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #4BC25A;
+    font-size: 16px;
+    padding: 6px 18px;
+    border: none;
+    
+    box-shadow: 0px 1px 4px #a7a41c;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .banner .nav .right_btn .partner_btn {
+    position: absolute;
+    top: 5%;
+    right:0%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #4BC25A;
+    font-size: 16px;
+    
+    box-shadow: 0px 1px 4px #a7a41c;
+    padding:  6px 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .banner .nav .right_btn .partner_btn:hover {
+    border:1px solid #4BC25A;
+    
+
+    color:#4BC25A;
+    background-color: #ffffff;
+  }
+  
+  .banner .nav .right_btn .bussines_btn:hover {
+    border:1px solid #4BC25A;
+    color:#4BC25A;
+    background-color: #ffffff;
+  }
+
+  .banner .nav .logo_left img{
+    height: 6em;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 8em;
+
+  }
+  
+  .banner .nav .logo_left h2{
+    position: absolute;
+    top: 3%;
+    left: 11%;
+    font-weight: bold;
+    color: #4BC25A;
+}
+.accrodionContainer1 {
+    padding: 30px;
+    background: #fff;
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+    border-radius: 3px;
+    margin: 100px 0 50px;
+}
+
+    .accrodionContainer1 .accordion1 {
+        background-color: transparent;
+        color: #091E42;
+        cursor: pointer;
+        padding: 15px 20px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        transition: 0.35s;
+        font-family: 'Quicksand', sans-serif !important;
+        border-radius: 5px;
+    }
+
+.section {
+    margin-top: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.section-content {
+    margin-bottom: 10px;
+    display: none;
+    padding: 20px;
+    border: 1px solid #eee;
+    background: #f9f9f9;
+    width: 100%;
+}
+
+.toggle-btn {
+    background: transparent;
+    border: 1px solid #d3d3d3;
+    padding: 8px 20px;
+}
+
+
+
+
+
+        .accrodionContainer1 .accordion1 i {
+            margin-right: 10px;
+            color: #0052CC;
+        }
+
+    .accrodionContainer1 .accordionHeading1 {
+        font-size: 18px;
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 2rem;
+        padding-right: 0;
+        color: #253858;
+        background-color: #fff;
+        letter-spacing: .1em;
+        font-weight: 700;
+        border-radius: .25rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        font-family: 'Quicksand', sans-serif !important;
+    }
+
+    .accrodionContainer1 .active,
+    .accrodionContainer1 .accordion1:hover {
+        background-color: #F4F5F7;
+    }
+
+    .accrodionContainer1 .accordion1:after {
+        content: '\002B';
+        color: #091E42;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .accrodionContainer1 .active:after {
+        content: "\2212";
+    }
+
+    .accrodionContainer1 .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        margin-bottom: 2px;
+        overflow: hidden;
+        transition: max-height 0.35s ease-out;
+        /* border: 1px solid #ccc; */
+        border-top: 0;
+        border-radius: 0px 0px 5px 5px;
+        -webkit-box-shadow: none;
+    }
+
+        .accrodionContainer1 .panel figure {
+            padding: 15px;
+            padding-bottom: 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .accrodionContainer1 .panel p {
+            margin: 15px 0;
+            font-size: 14px;
+            line-height: 25px;
+            color: #091E42;
+            font-family: 'Quicksand', sans-serif !important;
+            text-align: justify;
+        }
+
+@media screen and (max-width: 768px) {
+    .accrodionContainer1 {
+        margin: 50px 0;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .accrodionContainer1 {
+        padding: 15px;
+        margin: 25px 0;
+    }
+
+        .accrodionContainer1 .accordionHeading1 {
+            text-align: center;
+        }
+
+        .accrodionContainer1 .panel p {
+            padding: 0;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

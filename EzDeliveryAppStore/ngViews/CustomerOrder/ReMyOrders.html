@@ -1,0 +1,228 @@
+﻿<div header-Page>
+
+</div>
+<div class="container-fluid" id="container-fluid">
+
+    <section class="mt-291">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
+
+                <div class="col-lg-2 col-md-6 col-sm-12">
+                </div>
+                <div class="col-lg-8 col-md-6 col-sm-12">
+
+                    <form name="orderForm" novalidate autocomplete="off" class="">
+                        <h2 class="mt-0">Send Package</h2>
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12  eachFormField">
+                                <label class="field a-field a-field_a3 page__field icon-class">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <input class="field__input box-input" ng-model="PickupPoint" id="gmap" ng-keyup="getPickupAddress()" placeholder="From" name="from" required>
+                                    <span class="field__label-wrap">
+                                        <span class="field__label " style="color:#020000">
+                                            From <span style="color: #E76886;">*</span>
+                                        </span>
+                                    </span>
+
+                                </label>
+                                <p ng-show="submitted==true && orderForm.from.$error.required"><b style="color:brown">*From  Is Required</b></p>
+
+                            </div>
+
+
+
+
+                            <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12 eachFormField">
+                                <label class="field a-field a-field_a3 page__field icon-class">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <input class="field__input box-input" placeholder="To" ng-model="DeliveryPoint" id="Dmap" ng-keyup="getDestinationAddress()" name="to" required>
+                                    <span class="field__label-wrap">
+                                        <span class="field__label " style="color:#020000">
+                                            To <span style="color: #E76886;">*</span>
+                                        </span>
+                                    </span>
+
+                                </label>
+                                <p ng-show="submitted==true && orderForm.to.$error.required"><b style="color:brown">*To  Is Required</b></p>
+
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12  eachFormField">
+                                <label class="field a-field a-field_a3 page__field">
+                                    <input class="field__input box-input" ng-model="LandMark" placeholder=" Landmark" name="Landmark" required>
+                                    <span class="field__label-wrap">
+                                        <span class="field__label " style="color:#020000">
+                                            Landmark <span style="color: #E76886;">*</span>
+                                        </span>
+                                    </span>
+                                    </span>
+
+                                </label>
+                                <p ng-show="submitted==true && orderForm.Landmark.$error.required"><b style="color:brown">*Land Mark Is Required</b></p>
+
+                            </div>
+
+                            <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12  eachFormField">
+                                <label class="field a-field a-field_a3 page__field">
+                                    <input class="field__input box-input" ng-model="FromNumber" placeholder="Mobile Number" name="fromnumber" required>
+                                    <span class="field__label-wrap">
+                                        <span class="field__label " style="color:#020000">
+                                            From Mobile Number <span style="color: #E76886;">*</span>
+                                        </span>
+                                    </span>
+
+                                </label>
+                                <p ng-show="submitted==true && orderForm.fromnumber.$error.required"><b style="color:brown">*From  Is Required</b></p>
+
+                            </div>
+                            <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12  eachFormField">
+                                <label class="field a-field a-field_a3 page__field">
+                                    <input class="field__input box-input" ng-model="ToNumber" placeholder="Mobile Number" name="tonumber" required>
+                                    <span class="field__label-wrap">
+                                        <span class="field__label " style="color:#020000">
+                                            To Mobile Number <span style="color: #E76886;">*</span>
+                                        </span>
+                                    </span>
+
+                                </label>
+                                <p ng-show="submitted==true && orderForm.tonumber.$error.required"><b style="color:brown">*From  Is Required</b></p>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12 eachFormField">
+                                <label class="field a-field a-field_a3 page__field">
+                                    <input class="field__input box-input" placeholder="&#x20B9;" name="price" id="goodPrice" ng-model="ValueOfGood">
+                                    <span class="field__label-wrap">
+                                        <span class="field__label " style="color:#020000">
+                                            Estimated Value Goods
+                                        </span>
+                                    </span>
+
+                                </label>
+
+
+                            </div>
+                            <div class="col-lg-6 eachFormField a-field_a3">
+                                <select class="box-input" ng-model="CategoryId" style="width:100%;">
+                                    <option value="">Select Category</option>
+                                    <option value="{{c.CategoryId}}" ng-repeat="c in Category">{{c.CategoryNameEn}}</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12 eachFormField">
+                                <label class="field a-field a-field_a3 page__field">
+                                    <input class="field__input box-input" placeholder="Weight" ng-model="Weight" name=" Size Ex. 10*20" id="To">
+                                    <span class="field__label-wrap">
+                                        <span class="field__label " style="color:#020000">
+                                            Goods Weight
+                                        </span>
+                                    </span>
+
+                                </label>
+
+
+                            </div>
+                            <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12 eachFormField">
+                                <label class="field a-field a-field_a3 page__field">
+                                    <input class="field__input box-input" ng-model="Size" placeholder=" Size Ex. 10*20" name=" Size Ex. 10*20" id="To">
+                                    <span class="field__label-wrap">
+                                        <span class="field__label " style="color:#020000">
+                                            Goods Size
+                                        </span>
+                                    </span>
+
+                                </label>
+
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 eachFormField">
+
+
+                                <div class="col-lg-6 col-md-12 col-sm-12 eachFormField" style="margin-top:2em;">
+
+                                    <div class="dropzone" action="upload.php" method="POST">
+
+                                        <input type="file" fileread="ProductPic" accept="image/*" placeholder="">
+
+                                        <div class="container1" ng-if="objGvtId.FilePath != ''">
+                                            <img class="profile-picture  mb-2" src="{{objGvtId.FilePath}}" alt="" style="cursor:pointer;width: 70px; height: 72px;">
+
+                                            <div class="overlay">
+                                                <a href="javascript:void(0);" class="icon">
+                                                    <div style="left: 13px; top: 17px;">
+                                                        <i class="nav-icon i-Close-Window font-weight-bold" ng-click="RemoveDoc(objGvtId);" style="right: 130px;
+                                                            font-size: 30px;"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p>Drag your files here  Or Update</p>
+
+
+
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+
+                                <div class="col-lg-6 col-md-12 col-sm-12 eachFormField" style="margin-top:2em;">
+<textarea class=" box-input" placeholder="Order details" name="message" id="message" cols="30" rows="3" style="height: 113px; width:100%;" ng-model="OrderDetailText"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px;">
+                        </div>
+                        <div class="center mt-291">
+                            <button type="button" class="confirm_btn"
+                                    ng-click="submitted=true;CreateCustomerOrder(orderForm.$valid)">
+                                Confirm
+                            </button>
+
+
+
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12  " style="margin-top:2em;">
+
+                    <div class="mapouter" ng-hide="!emptyAddress">
+                        <div class="gmap_canvas">
+                            <div id="map">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+</div><!-- container div close-->
+<div footer-Page>
+
+</div>

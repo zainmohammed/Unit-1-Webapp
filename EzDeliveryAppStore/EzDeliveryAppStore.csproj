@@ -1,0 +1,389 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98A00734-E9DC-4CEB-9E73-6AEB228CAAE0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EzDeliveryAppStore</RootNamespace>
+    <AssemblyName>EzDeliveryAppStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Apis, Version=1.40.2.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.40.2\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.40.2.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.40.2\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.40.2.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.40.2\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\angular-moment-picker.min.css" />
+    <Content Include="Content\b1.jpg" />
+    <Content Include="Content\b1.svg" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\sweetalert\bootstrap-sweetalert.png" />
+    <Content Include="Content\sweetalert\docs.css" />
+    <Content Include="Content\sweetalert\sweet-alert.css" />
+    <Content Include="Content\sweetalert\sweetalert2.min.css" />
+    <Content Include="Content\sweetalert\thumbs-up.jpg" />
+    <Content Include="css\Bids.css" />
+    <Content Include="css\bussiness.css" />
+    <Content Include="css\bussinessfooter.css" />
+    <Content Include="css\bussinessform.css" />
+    <Content Include="css\category.css" />
+    <Content Include="css\footer.css" />
+    <Content Include="css\form.css" />
+    <Content Include="css\home.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\offer.css" />
+    <Content Include="css\OrderDetails.css" />
+    <Content Include="css\OrderTrackingCss.css" />
+    <Content Include="css\partner.css" />
+    <Content Include="css\partnerfom.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\restaurentpage.css" />
+    <Content Include="css\senpackage.css" />
+    <Content Include="css\swiper.css" />
+    <Content Include="css\swiper.min.css" />
+    <Content Include="EzDeliveryAppJs.js" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\1.png" />
+    <Content Include="images\24x7.svg" />
+    <Content Include="images\4.png" />
+    <Content Include="images\All Time.svg" />
+    <Content Include="images\apple.png" />
+    <Content Include="images\archive.png" />
+    <Content Include="images\arrow_down.svg" />
+    <Content Include="images\b1.jpg" />
+    <Content Include="images\b1.png" />
+    <Content Include="images\b2.png" />
+    <Content Include="images\b3.png" />
+    <Content Include="images\b5.png" />
+    <Content Include="images\background%402x.png" />
+    <Content Include="images\background.svg" />
+    <Content Include="images\bannerimg.png" />
+    <Content Include="images\bg_office.jpg" />
+    <Content Include="images\bike-1.svg" />
+    <Content Include="images\bike.svg" />
+    <Content Include="images\brand-engagement.svg" />
+    <Content Include="images\business-card%402x.png" />
+    <Content Include="images\business-card.png" />
+    <Content Include="images\business-card.svg" />
+    <Content Include="images\c1.png" />
+    <Content Include="images\c10.png" />
+    <Content Include="images\c11.png" />
+    <Content Include="images\c12.png" />
+    <Content Include="images\c13.png" />
+    <Content Include="images\c14.png" />
+    <Content Include="images\c15.png" />
+    <Content Include="images\c16.png" />
+    <Content Include="images\c17.png" />
+    <Content Include="images\c18.png" />
+    <Content Include="images\c19.png" />
+    <Content Include="images\c2.png" />
+    <Content Include="images\c3.png" />
+    <Content Include="images\c4.png" />
+    <Content Include="images\c5.png" />
+    <Content Include="images\c6.png" />
+    <Content Include="images\c7.png" />
+    <Content Include="images\c8.png" />
+    <Content Include="images\c9.png" />
+    <Content Include="images\calendar %281%29.svg" />
+    <Content Include="images\capDefault.jpeg" />
+    <Content Include="images\cards.png" />
+    <Content Include="images\carrybag.svg" />
+    <Content Include="images\catbg.svg" />
+    <Content Include="images\catbg1.svg" />
+    <Content Include="images\city %282%29.svg" />
+    <Content Include="images\city%402x.png" />
+    <Content Include="images\city.svg" />
+    <Content Include="images\citymine.svg" />
+    <Content Include="images\del.png" />
+    <Content Include="images\deliver.svg" />
+    <Content Include="images\delivery-men.jpg" />
+    <Content Include="images\delivery.jpg" />
+    <Content Include="images\DHL_2_Camera_1058-767x511.jpg" />
+    <Content Include="images\discount.png" />
+    <Content Include="images\discount.svg" />
+    <Content Include="images\dots_vert.png" />
+    <Content Include="images\ez.jpg" />
+    <Content Include="images\facebook.png" />
+    <Content Include="images\gmail %281%29.png" />
+    <Content Include="images\grey.svg" />
+    <Content Include="images\grey2.svg" />
+    <Content Include="images\greybg.svg" />
+    <Content Include="images\Group 1219.svg" />
+    <Content Include="images\Group 1220.svg" />
+    <Content Include="images\Group 1221.svg" />
+    <Content Include="images\Group 1222.svg" />
+    <Content Include="images\Group 1224.svg" />
+    <Content Include="images\Group 1225.svg" />
+    <Content Include="images\Group 1226.svg" />
+    <Content Include="images\Group 1227.svg" />
+    <Content Include="images\Group 1228.svg" />
+    <Content Include="images\Group 1229.svg" />
+    <Content Include="images\Group 1230.svg" />
+    <Content Include="images\Group 1231.svg" />
+    <Content Include="images\Group 1232.svg" />
+    <Content Include="images\Group 1233.svg" />
+    <Content Include="images\Group 1234.svg" />
+    <Content Include="images\Group 1235.svg" />
+    <Content Include="images\Group 199.svg" />
+    <Content Include="images\Group 206.svg" />
+    <Content Include="images\hand.svg" />
+    <Content Include="images\home1.png" />
+    <Content Include="images\homebg.jpg" />
+    <Content Include="images\homeutil.svg" />
+    <Content Include="images\icon_ccv.gif" />
+    <Content Include="images\icon_home_1.svg" />
+    <Content Include="images\icon_home_2.svg" />
+    <Content Include="images\icon_home_3.svg" />
+    <Content Include="images\icon_home_4.svg" />
+    <Content Include="images\Image 1%402x.png" />
+    <Content Include="images\Image 2%402x.png" />
+    <Content Include="images\Image 2.png" />
+    <Content Include="images\imagetaglinelogo.png" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\log.png" />
+    <Content Include="images\login-01.svg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\money.svg" />
+    <Content Include="images\package.svg" />
+    <Content Include="images\playstore.png" />
+    <Content Include="images\pngcity.png" />
+    <Content Include="images\pngcity.svg" />
+    <Content Include="images\ratnadeep-2016071908.svg" />
+    <Content Include="images\rb5.svg" />
+    <Content Include="images\Rectangle -1.svg" />
+    <Content Include="images\Rectangle -2.svg" />
+    <Content Include="images\Rectangle -3.svg" />
+    <Content Include="images\Rectangle -4.svg" />
+    <Content Include="images\Rectangle -5.svg" />
+    <Content Include="images\Rectangle -6.svg" />
+    <Content Include="images\Rectangle -7.svg" />
+    <Content Include="images\Rectangle 28.svg" />
+    <Content Include="images\rib.png" />
+    <Content Include="images\rib1.png" />
+    <Content Include="images\rib3.png" />
+    <Content Include="images\rib4.svg" />
+    <Content Include="images\rib5.png" />
+    <Content Include="images\rib5d.svg" />
+    <Content Include="images\route.svg" />
+    <Content Include="images\sendpackage.svg" />
+    <Content Include="images\shopping.svg" />
+    <Content Include="images\spar.png" />
+    <Content Include="images\stre.svg" />
+    <Content Include="images\trending %281%29.png" />
+    <Content Include="images\twitter.png" />
+    <Content Include="images\Untitled-1.svg" />
+    <Content Include="images\Untitled-2.svg" />
+    <Content Include="images\Untitled-3.svg" />
+    <Content Include="images\Untitled-4.svg" />
+    <Content Include="images\Untitled-5.svg" />
+    <Content Include="images\walking.svg" />
+    <Content Include="images\walkingman.svg" />
+    <Content Include="images\whatsapp.png" />
+    <Content Include="Index.html" />
+    <Content Include="ngViews\AgentRegister\AgentDashBoard.html" />
+    <Content Include="ngViews\AgentRegister\AgentRegistration.html" />
+    <Content Include="ngViews\AgentRegister\AgentRegistration.js" />
+    <Content Include="ngViews\Bids\DriverBids.html" />
+    <Content Include="ngViews\Bids\DriverBids.js" />
+    <Content Include="ngViews\CustomerOrder\MyOrders.html" />
+    <Content Include="ngViews\CustomerOrder\MyOrders.js" />
+    <Content Include="ngViews\CustomerOrder\OrderTracking.js" />
+    <Content Include="ngViews\CustomerOrder\OrderDetails.html" />
+    <Content Include="ngViews\CustomerOrder\OrderDetails.js" />
+    <Content Include="ngViews\CustomerOrder\OrderTracking.html" />
+    <Content Include="ngViews\CustomerRegister\CustomerHome.html" />
+    <Content Include="ngViews\CustomerOrder\CustomerOrder.js" />
+    <Content Include="ngViews\CustomerOrder\CustomerOrder.html" />
+    <Content Include="ngViews\CustomerRegister\CustomerHome.js" />
+    <Content Include="ngViews\CustomerRegister\CustomerRegistration.js" />
+    <Content Include="ngViews\CustomerRegister\CustomerRegistration.html" />
+    <Content Include="ngViews\CustomerRegister\CustRegister.html" />
+    <Content Include="ngViews\Directives\Footer\footer.html" />
+    <Content Include="ngViews\Directives\Footer\footer.js" />
+    <Content Include="ngViews\Directives\Header\Header.html" />
+    <Content Include="ngViews\Directives\Header\header.js" />
+    <Content Include="ngViews\Login\AgentLogin.html" />
+    <Content Include="ngViews\Login\AgentLogin.js" />
+    <Content Include="ngViews\Login\CustomerLogin.html" />
+    <Content Include="ngViews\Login\CustomerLogin.js" />
+    <Content Include="ngViews\Login\HeroLogin.html" />
+    <Content Include="ngViews\Login\HeroLogin.js" />
+    <Content Include="ngViews\Order\angular-audio-recorder.min.js" />
+    <Content Include="ngViews\VendorRegistor\VendorRegistor.js" />
+    <Content Include="ngViews\VendorRegistor\VendorRegistration.html" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\angular-cookies.min.js" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-moment-picker.min.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\dirPagination.js" />
+    <Content Include="Scripts\map.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\offer.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\sweetalert.script.js" />
+    <Content Include="Scripts\sweetalert2.min.js" />
+    <Content Include="Scripts\swiper.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="web_audio_recorder_js\Mp3LameEncoder.min.js" />
+    <Content Include="web_audio_recorder_js\OggVorbisEncoder.min.js" />
+    <Content Include="web_audio_recorder_js\WavAudioEncoder.min.js" />
+    <Content Include="web_audio_recorder_js\WebAudioRecorder.js" />
+    <Content Include="web_audio_recorder_js\WebAudioRecorderMp3.js" />
+    <Content Include="web_audio_recorder_js\WebAudioRecorderOgg.js" />
+    <Content Include="web_audio_recorder_js\WebAudioRecorderWav.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\sweetalert\sweet-alert.less" />
+    <Content Include="Content\sweetalert\sweet-alert-combine.less" />
+    <Content Include="Content\sweetalert\sweet-alert-animations.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="images\city [Recovered].ai" />
+    <Content Include="images\ll.psd" />
+    <Content Include="images\login-01.psd" />
+    <Content Include="images\Untitled-1 [Recovered].ai" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Views\Sweet\Alert.cshtml" />
+    <Content Include="README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="web_audio_recorder_js\Mp3LameEncoder.min.js.mem" />
+    <Content Include="web_audio_recorder_js\OggVorbisEncoder.min.js.mem" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ngViews\Admin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64409</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64409/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

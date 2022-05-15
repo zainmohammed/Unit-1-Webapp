@@ -1,0 +1,53 @@
+
+@media screen and (max-width: 568px){
+
+    .login_image img{
+        margin-left:-15em;
+        width:43em;
+    }
+
+}
+
+
+@media screen and (max-width: 640px){
+
+    .login_image img{
+        margin-left:-15em;
+        
+    }
+
+}
+
+
+@media screen and (max-width: 667px){
+
+    .login_image img{
+        margin-left:-13em;
+        width:43em;
+        display:none;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 568px){
+
+    .logo_img img{
+        /*margin-left:3em;*/
+    }
+
+}
+
+
+@media screen and (max-width: 667px){
+
+    .logo_img img{
+        /*margin-left:5em;*/
+    }
+
+}
+
+
+

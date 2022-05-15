@@ -1,0 +1,312 @@
+﻿<style>
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .container-fluid {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .container {
+     width: 100%; 
+    margin-top: 3em;
+}
+
+    .table-hover > tbody > tr:hover {
+        background-color: #f5f5f5;
+    }
+@media screen and (max-width: 767px){
+.table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+}
+}
+</style>
+
+<body>
+    <div class="container-fluid" id="container">
+        <!--<section>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                <div class="col-lg-4 logo_field">
+                    <div class="row">
+                        <a href="home.html"><img src="../../../images/logo.png"> </a>
+                    </div>
+                    <div class="text_ezy">
+                        <div class="row">
+                            <a href="home.html">
+                                <h2> Ez</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h4 style="color: #4BC25A;
+                        margin-top: 3em;
+                        margin-left: -138px;
+                        font-weight: bold;">
+                        My Order List
+                    </h4>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="row">
+
+                        <button class="login_s pull-right">
+                            <a href="Order">
+                                Order
+                            </a>
+                        </button>
+
+
+
+                        <button class="login_s pull-right" ng-show="AuthCust!='false'">
+                            <a href="/Home">
+                                Home
+                            </a>
+                        </button>
+                        <button class="login_s pull-right" ng-show="AuthCust!='false'">
+                            <a href="/Logout">
+                                Logout
+                            </a>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+        <section>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+
+                    <div class="col-lg-4 logo_field">
+                        <a href="home.html" class="logo  logo_field">
+                            <figure>
+
+                                <img src="../../../images/logo.png">
+                                <span style="color:#4BC25A;font-size:25px;font-weight:bold;"> Ezy Delivery</span>
+                                <p class="tagline1"> Make Your Life Ezy </p>
+                            </figure>
+
+                        </a>
+                    </div>
+                    <button class="login_s pull-right" ng-show="AuthCust!='false'">
+                        <a href="/Home">
+                            Home
+                        </a>
+                    </button>
+
+                    <button class="login_s pull-right">
+                        <a href="Order">
+                            Order
+                        </a>
+                    </button>
+
+
+
+
+                    <button class="login_s pull-right" ng-show="AuthCust!='false'">
+                        <a href="/Logout">
+                            Logout
+                        </a>
+                    </button>
+
+
+                </div>
+            </div>
+
+        </section>
+        <section class="bussiness_page_1" style="    margin-bottom: 37px;">
+            <div class="row">
+                <div class="col-lg-12 just_img_partner">
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="green_bg2">
+                            <div class="green_bg_box">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12" style="margin-top:0px;">
+
+                        <div class="bike_only" style="float:right;">
+                            <img src="../../../images/bike.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Container Start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Table Record Begin -->
+                    <div class="table-responsive tbl-one">
+                        <table class="table table-bordered bor-bot one-color">
+                            <thead>
+                                <tr>
+                                    <th>Srno.</th>
+                                    <th class="size-one">Customer Order Number</th>
+                                    <th class="size-one">Order Size</th>
+                                    <th>Order Weight</th>
+                                    <th>Order ValueOfGood</th>
+
+
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr dir-paginate="c in myOrderLst | itemsPerPage:10 ">
+                                    <td data-title="Srno.">{{$index+1}}</td>
+                                    <td><a href="/OrderDetails/{{c.CustomerOrderId}}">{{c.CustomerOrderNo}}</a></td>
+                                    <td>{{c.Size}}</td>
+                                    <td>{{c.Weight}}</td>
+                                    <td>{{c.ValueOfGood}}</td>
+
+                                    <td>
+                                        <!--<button href="#" type="button" class="btn btn-success btn-xs">Accept</button>-->
+                                        <button href="#" type="button" class="btn btn-danger btn-xs" ng-click="CancelOrder(c.CustomerOrderId)">Cancel</button>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Table End -->
+                    <div class="page-footer" style="background-color: #4bc25a;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <ul class="pager">
+                                        <li><a href="#">Previous</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8 text-center">
+                                    <ul class="pagination pagination-sm">
+                                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul class="pager">
+                                        <li><a href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="footer">
+            <div class="row">
+                <div class="col-lg-12 grey_box_footer">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
+
+                            <div class="logo_footer">
+                                <a href="home.html"><img src="../../../images/logo.png"> </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-7  col-md-9 col-sm-9 col-xs-9 icons_ft">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 social_icons1" style="/* margin-left: 0em; */  ">
+
+
+                                        <ul class="icons1">
+                                            <li>
+                                                <img src="../../../images/facebook.png">
+                                            </li>
+                                            <li>
+                                                <img src="../../../images/twitter.png">
+                                            </li>
+                                            <li>
+                                                <img src="../../../images/whatsapp.png">
+                                            </li>
+                                            <li>
+                                                <img src="../../../images/gmail (1).png">
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu_footer">
+                                        <ul>
+                                            <li>
+                                                <a href=""> About </a>
+                                            <li>
+                                                <a href=""> Careers </a>
+
+                                            </li>
+                                            <li>
+                                                <a href=""> Terms & Conditions </a>
+
+                                            </li>
+                                            <li>
+                                                <a href=""> privacy Policy </a>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-2 col-md-12">
+                            <div class="row">
+
+                                <div class="walking_footer pull-right">
+                                    <img src="../../../images/walking.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="copyright">
+            <div class="row"  style="background-color:#4BC25A">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+
+                    <div class="green_bg_ft1">
+                        <p> atozeesolutions@2019</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+    </div><!-- container div close-->
+</body>

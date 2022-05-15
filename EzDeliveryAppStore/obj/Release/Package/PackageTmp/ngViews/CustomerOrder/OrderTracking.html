@@ -1,0 +1,612 @@
+﻿
+
+    <style>
+        .tracking_details {
+            margin-left: 1em;
+            margin-top: 5em;
+        }
+
+
+            .tracking_details h3 {
+                color: #4BC25A;
+            }
+
+            .tracking_details p {
+                color: #4BC25A;
+            }
+
+            .tracking_details .track_con {
+                margin-bottom: 2em;
+            }
+
+        .time_track i {
+            color: #4BC25A;
+            font-size: 33px;
+        }
+
+        /* map */
+        .mapouter {
+            position: relative;
+            text-align: bottom;
+            height: 700px;
+            width: 700px;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 700px;
+            width: 700px;
+            margin-top: 27px;
+            margin-left: -25px;
+        }
+
+
+
+
+        .tagline1 {
+            color: #4BC25A;
+            font-size: 13px;
+            margin-top: -1em;
+            /* position: absolute; */
+            text-decoration: underline;
+            top: 67%;
+            left: 21%;
+            margin-left: 5em;
+        }
+    </style>
+
+
+<body>
+
+
+
+
+    <div class="container-fluid" id="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-top:2em;">
+                    <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 logo_field">
+
+                        <a href="home.html" class="logo  logo_field">
+                            <figure>
+
+                                <img src="../../../images/logo.png">
+                                <span style="color:#4BC25A;font-size:25px;font-weight:bold;"> Ezy Delivery</span>
+                                <p class="tagline1"> Make Your Life Ezy </p>
+                            </figure>
+
+                        </a>
+                    </div>
+
+                    <!--      <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                         <label class="field a-field a-field_a3 page__field length_increase">
+                             <input class="field__input" placeholder="Search" name="Search" id="Search"
+                                 style="padding-right: 29px; border:2px solid #cec6c6;color:#cec6c6;">
+                             <span class="field__label-wrap">
+                                 <span class="field__label " style="color:green;">
+                                     Search
+                                 </span>
+                             </span>
+
+                         </label>
+                         <div id="errorNumber" class="error">
+                             Search
+                         </div>
+                     </div>-->
+
+
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="pulse">
+
+                        </div>
+                        <button class="login_s pull-right" ng-show="AuthCust!='false'">
+                            <a href="/Logout">
+                                Logout
+                            </a>
+                        </button>
+
+                        <button class="login_s pull-right">
+                            <a href="Order">
+                                Order
+                            </a>
+                        </button>
+
+                        <button class="login_s pull-right">
+                            <a href=" My Order">
+                                My Order
+                            </a>
+                        </button>
+
+                        <button class="login_s pull-right" ng-show="AuthCust!='false'">
+                            <a href="/Home">
+                                Home
+                            </a>
+                        </button>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+
+        <div class="container-fluid" style="margin-top:13em;">
+            <div id="accordion" class="panel-group">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#panelBodyOne" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">Order 1</a>
+                        </h4>
+                    </div>
+                    <div id="panelBodyOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+
+                            <div class="tracking_details">
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12 col-sm-12 Track_con ">
+
+                                                <h3> Order #1234321</h3>
+                                                <div class="row" style="margin-top:5em;">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> From </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p> :Tolichowki</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> To  </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>  : Delhi</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> Estimated value tem  </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>  : 1</p>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> size Ex:10X12 </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>  : 3Kg</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+
+                                                        <p> Hero Name    </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>   : Mohd</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> Hero Id </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>   : 122e33</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> Hero #mobile</p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>   : 897654321</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row" style="    margin-bottom: 3em;">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> Delivery Cost </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>   : 122</p>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="time_track">
+                                                    <i class="fas fa-history" id="tminus"></i>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pull-right">
+                                                <div class="mapouter">
+                                                    <div class="gmap_canvas">
+                                                        <iframe width="500" height="500" id="gmap_canvas"
+                                                                src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                                        <a href="https://www.bitgeeks.net/embed-google-map/">
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#panelBodyTwo" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion">Order 2</a>
+                        </h4>
+                    </div>
+                    <div id="panelBodyTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="tracking_details">
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12 col-sm-12 Track_con ">
+
+                                                <h3> Order #1234321</h3>
+                                                <div class="row" style="margin-top:5em;">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> From </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p> :Tolichowki</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> To  </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>  : Delhi</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> Estimated value tem  </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>  : 1</p>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> size Ex:10X12 </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>  : 3Kg</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+
+                                                        <p> Hero Name    </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>   : Mohd</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> Hero Id </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>   : 122e33</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> Hero #mobile</p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>   : 897654321</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row" style="    margin-bottom: 3em;">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> Delivery Cost </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>   : 122</p>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="time_track">
+                                                    <i class="fas fa-history"> 10:16</i>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pull-right">
+                                                <div class="mapouter">
+                                                    <div class="gmap_canvas">
+                                                        <iframe width="500" height="500" id="gmap_canvas"
+                                                                src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                                        <a href="https://www.bitgeeks.net/embed-google-map/">
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#panelBodyThree" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion">Order 3</a>
+                        </h4>
+                    </div>
+                    <div id="panelBodyThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="tracking_details">
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12 col-sm-12 Track_con ">
+
+                                                <h3> Order #1234321</h3>
+                                                <div class="row" style="margin-top:5em;">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> From </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p> :Tolichowki</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> To  </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>  : Delhi</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> Estimated value tem  </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>  : 1</p>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> size Ex:10X12 </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>  : 3Kg</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+
+                                                        <p> Hero Name    </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>   : Mohd</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> Hero Id </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>   : 122e33</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> Hero #mobile</p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>   : 897654321</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row" style="    margin-bottom: 3em;">
+                                                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5">
+                                                        <p> Delivery Cost </p>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <p>   : 122</p>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="time_track">
+                                                    <i class="fas fa-history"> 10:16</i>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pull-right">
+                                                <div class="mapouter">
+                                                    <div class="gmap_canvas">
+                                                        <iframe width="500" height="500" id="gmap_canvas"
+                                                                src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                                        <a href="https://www.bitgeeks.net/embed-google-map/">
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="footer">
+            <div class="row">
+                <div class="col-lg-12 grey_box_footer">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
+
+                            <div class="logo_footer">
+                                <a href="home.html"><img src="../../../images/logo.png"> </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-7  col-md-9 col-sm-9 col-xs-9 icons_ft">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 social_icons1" style="/* margin-left: 0em; */  ">
+
+
+                                        <ul class="icons1">
+                                            <li>
+                                                <img src="../../../images/facebook.png">
+                                            </li>
+                                            <li>
+                                                <img src="../../../images/twitter.png">
+                                            </li>
+                                            <li>
+                                                <img src="../../../images/whatsapp.png">
+                                            </li>
+                                            <li>
+                                                <img src="../../../images/gmail (1).png">
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu_footer">
+                                        <ul>
+                                            <li>
+                                                <a href=""> About </a>
+                                            <li>
+                                                <a href=""> Careers </a>
+
+                                            </li>
+                                            <li>
+                                                <a href=""> Terms & Conditions </a>
+
+                                            </li>
+                                            <li>
+                                                <a href=""> privacy Policy </a>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-2 col-md-12">
+                            <div class="row">
+
+                                <div class="walking_footer pull-right">
+                                    <img src="../../../images/walking.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="copyright">
+            <div class="row"  style="background-color:#4BC25A">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+
+                    <div class="green_bg_ft1">
+                        <p> atozeesolutions@2019</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+
+    </div><!-- container div close-->
+
+
+</body>
+
+</html>

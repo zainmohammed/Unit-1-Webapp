@@ -1,0 +1,609 @@
+﻿<!-- YOUR CUSTOM CSS -->
+
+<style>
+
+
+
+    .main-menu ul .menu-wrapper, .main-menu ul ul {
+        position: absolute;
+        display: none;
+        z-index: 1;
+        height: auto;
+        left: -131px;
+        top: 100%;
+        min-width: 170px;
+        box-shadow: rgba(0, 0, 0, 0.176) 0px 6px 12px;
+        margin: 0px;
+        padding: 0px;
+        background: rgb(255, 255, 255);
+    }
+
+
+
+    .title {
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+
+    .header__search {
+        margin: 0 10px;
+        position: relative;
+        width: 140px;
+    }
+
+        .header__search:after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background: #eee;
+            display: block;
+            right: -20px;
+            top: 0;
+        }
+
+        .header__search .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            color: #9BB7C5;
+        }
+
+        .header__search .search-field {
+            background: #E2ECF0;
+            border-radius: 20px;
+            height: 30px;
+            width: 100%;
+            padding-left: 30px;
+            padding-right: 5px;
+            font-size: 1.3em;
+        }
+
+    .header__notification {
+        width: 100px;
+        height: 20px;
+        margin: 0;
+        display: inline-table;
+        /* justify-content: flex-end; */
+        /* left: 251px; */
+        margin-top: 6px;
+
+        float: right;
+    }
+
+        .header__notification .bell-icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+            .header__notification .bell-icon:hover {
+                color: #eee;
+            }
+
+            .header__notification .bell-icon .notification-number {
+                font-size: 0.6em;
+                border-radius: 50%;
+                background-color: #00BFBE;
+                border: 5px solid #00BFBE;
+                color: #FFFFFF;
+            }
+
+            .header__notification .bell-icon .bell-number {
+                position: absolute;
+                top: -50%;
+                left: 50%;
+            }
+
+            .header__notification .bell-icon .notification__list {
+                position: absolute;
+                background: #E2ECF0;
+                width: 230px;
+                list-style-type: none;
+                text-align: center;
+                right: -90px;
+                top: 50px;
+                border-radius: 7px;
+                -webkit-animation: fadeIn 1s;
+                animation: fadeIn 1s;
+            }
+
+                .header__notification .bell-icon .notification__list:before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border: 10px solid transparent;
+                    border-bottom-color: #fff;
+                    left: 60%;
+                    top: -20px;
+                    -webkit-transform: translate(-50%);
+                    transform: translate(-50%);
+                }
+
+            .header__notification .bell-icon .notification__list__name {
+                background: #fff;
+                color: #9BB7C5;
+                padding: 10px 0;
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
+                border-bottom: 1px solid #9BB7C5;
+                transition: all 1s ease-in-out;
+            }
+
+            .header__notification .bell-icon .notification__list .large-number {
+                font-size: 0.8em;
+                border-width: 5px;
+            }
+
+            .header__notification .bell-icon .list__item {
+                border-bottom: 1px solid #9BB7C5;
+                transition: all 1s ease-in-out;
+            }
+
+                .header__notification .bell-icon .list__item .user-image {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50px;
+                }
+
+                .header__notification .bell-icon .list__item .messages {
+                    padding-left: 10px;
+                    color: #909DA8;
+                }
+
+                    .header__notification .bell-icon .list__item .messages b {
+                        color: #727F8C;
+                    }
+
+            .header__notification .bell-icon .list__item--link {
+                display: flex;
+                padding: 10px;
+                text-decoration: none;
+                text-align: left;
+                font-size: 0.7em;
+                opacity: 0.8;
+                align-items: center;
+            }
+
+                .header__notification .bell-icon .list__item--link:hover {
+                    opacity: 1;
+                }
+
+    .header__profile {
+        width: 120px;
+        align-self: stretch;
+        background: #9BB7C5;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+        .header__profile .profile__photo {
+            background: url(https://cdn.tutsplus.com/net/uploads/legacy/213_chris/ChrisThumbnail.jpg);
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .header__profile .fa-arrow-circle-o-down {
+            font-size: 1.6em;
+            color: #fff;
+        }
+
+    .small-icon {
+        font-size: 1.2em;
+        color: #D0DADF;
+    }
+
+
+
+    .hide {
+        display: none;
+    }
+
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .checklist {
+        max-width: 400px;
+        margin: 10px auto;
+    }
+
+        .checklist li {
+            padding: 5px 10px;
+            list-style-type: disc;
+        }
+
+    @media screen and (max-width: 767px) .tabs nav a span {
+        display: inline-block; !important;
+    }
+
+    header {
+        position: inherit;
+        top: 0;
+        width: 100%;
+        left: 0;
+    }
+
+    .tabs nav li.tab-current {
+        border: 2px solid #3c9e49;
+        box-shadow: inset 0 2px #3ea14a;
+        border-bottom: 0px solid #3d9d49;
+        z-index: 100;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-topright: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        /* background-color: red; */
+    }
+</style>
+
+<!-- End Preload -->
+<!-- Header ================================================== -->
+<header style="    background-color: white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col--md-4 col-sm-4 col-xs-4">
+                <a href="index.html" id="logo">
+                    <img src="img/logo.png" width="100" height="auto" alt="" data-retina="true" class="hidden-xs" style="    margin-top: -10px;">
+                    <img src="img/logo.png" width="59" height="23" alt="" data-retina="true" class="hidden-lg hidden-md hidden-sm">
+                </a>
+            </div>
+
+
+
+            <nav class="col--md-8 col-sm-8 col-xs-8">
+                <div class="header__notification">
+                    <div class="fa fa-bell-o bell-icon small-icon" style="color: #3d9f4a;
+    font-size: 23px;">
+                        <span class="notification-number bell-number">3</span>
+                        <ul class="notification__list dropdown hide" style="    padding: 0;">
+                            <h3 class="notification__list__name">
+                                Notifications
+                                <span class="notification-number large-number">3</span>
+                            </h3>
+                            <li class="list__item">
+                                <a href="Order-Details.html" class="list__item--link">
+                                    <img src="https://cdn.tutsplus.com/net/uploads/legacy/213_chris/ChrisThumbnail.jpg" alt="" class="user-image" />
+                                    <span class="messages">
+                                        Tolichowki to Mahdipatnam
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="Order-Details.html" class="list__item--link">
+                                    <img src="https://cdn.tutsplus.com/net/uploads/legacy/213_chris/ChrisThumbnail.jpg" alt="" class="user-image" />
+                                    <span class="messages">
+                                        Tolichowki to Mahdipatnam
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="Order-Details.html" class="list__item--link">
+                                    <img src="https://cdn.tutsplus.com/net/uploads/legacy/213_chris/ChrisThumbnail.jpg" alt="" class="user-image" />
+                                    <span class="messages">
+                                        Tolichowki to Mahdipatnam
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> <!-- bell-icon-->
+
+                </div>
+
+            </nav>
+        </div><!-- End row -->
+    </div><!-- End container -->
+</header>
+
+<div class=" white_bg " style="margin-top: 20px; margin-bottom: 20px;">
+    <div class="container ">
+        <div class="main_title" style="padding-top: 20px;">
+            <h2 class="nomargin_top" style="padding-bottom: 20px;">Complated Bids</h2>
+            <!--<div class="location">
+                135 Aurangabad Road, Hyderbad, BT4. <span class="opening">Opens at 17:00</span>
+            </div>-->
+        </div>
+
+    </div>
+    <div class="">
+        <div class="container ">
+            <div class="col-md-12">
+
+                <div class="col-md-12">
+                    <div class="theiaStickySidebar">
+                        <div id="cart_box">
+                            <h3> Accepted Bids <i class="icon_cart_alt pull-right"></i></h3>
+                            <div class="table-responsive tbl-one" ng-repeat="c in AllAcceptedBid">
+                                <table class="table table-bordered bor-bot one-color">
+                                    <thead>
+                                        <tr>
+                                            <th>Srno.</th>
+                                            <th class="size-one"> Order Number:</th>
+                                            <th class="size-one">Pick Up Location</th>
+                                            <th>Delivery Location</th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Srno.">{{index +1}}</td>
+                                            <td data-title="Customer id">{{c.CustomerOrderNo | limitTo : -6}}</td>
+                                            <td data-title="Pickup Location">{{c.PickUpAddress}}</td>
+                                            <td data-title="Delivery Location">{{c.DeliveryAddress}}</td>
+                                           
+                                        </tr>
+                                        <tr></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div><!-- End cart_box -->
+                    </div><!-- End theiaStickySidebar -->
+                </div>
+                <div class="row">
+                   
+                    <div class="col-md-4" ng-repeat=" c in OnGoingBids">
+                        <div class="theiaStickySidebar">
+                            <div id="cart_box">
+                                <h3> Ongoing Job </h3>
+                                <h3 id="clockdiv"></h3>
+                                <table class="table table_summary">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#0" class="remove_item"></a> <strong>Order No:</strong>
+                                            </td>
+                                            <td>
+                                                <strong class="pull-right">{{c.CustomerOrderNo}}</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#0" class="remove_item"></a> <strong>Pick Up Location: </strong>
+                                            </td>
+                                            <td>
+                                                <strong class="pull-right">{{c.PickUpAddress}}</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#0" class="remove_item"></a> <strong>Delivery Location: </strong>
+                                            </td>
+                                            <td>
+                                                <strong class="pull-right">{{c.DeliveryAddress}}</strong>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="#0" class="remove_item"></a> <strong>Customer Name :</strong>
+                                            </td>
+                                            <td>
+                                                <strong class="pull-right">{{c.CustomerOrderNo}}</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#0" class="remove_item"></a> <strong>Mobile No :</strong>
+                                            </td>
+                                            <td>
+                                                <strong class="pull-right">{{c.CustomerOrderNo}}</strong>
+                                            </td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                              
+                            </div><!-- End cart_box -->
+                        </div><!-- End theiaStickySidebar -->
+                    </div>
+
+                </div>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<div class="main_title">
+    <h2 class="nomargin_top"> Job Detials</h2>
+    <p>
+        Cum doctus civibus efficiantur in imperdiet deterruisset.
+    </p>
+</div>
+<div class="container ">
+    <div id="tabs" class="tabs">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/HeroDashboard" ng-class="{'active': path == '/HeroDashboard' }">
+                        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                        <span> Request</span>
+                    </a>
+                </li>
+                <li class="tab-current">
+                    <a href="/HeroDashboardComplate" ng-class="{'active': path == '/HeroDashboardComplate' }">
+                    <i class="fa fa-spinner" aria-hidden="true"></i>
+                    <span> Complete Job</span></a>
+                </li>
+                <li>
+                    <a href="/RejectedList" class="" ng-class="{'active': path == '/RejectedList' }">
+                        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                        <span> Rjected List</span>
+                    </a>
+                </li>
+
+
+               
+            </ul>
+        </nav>
+        <div class="content">
+
+            <section id="section-1" class="content-current" style="margin-bottom:30px;">
+                <div class="">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Table Record Begin -->
+                            <div class="table-responsive tbl-one">
+                                <table class="table table-bordered bor-bot one-color">
+                                    <thead>
+                                        <tr>
+                                            <th>Sno.</th>
+                                            <th class="size-one"> Order Number</th>
+                                            <th class="size-one">Pick Up Location</th>
+                                            <th>Delivery Location</th>
+
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="c in AllOrder">
+                                            <td data-title="Srno.">{{$index +1}}</td>
+                                            <td data-title="Customer id">{{c.CustomerOrderNo}}</td>
+                                            <td data-title="Pickup Location">{{c.PickUpAddress}}</td>
+                                            <td data-title="Delivery Location">{{c.DeliveryAddress}}</td>
+                                           
+                                        </tr>
+
+
+
+                                        <tr></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Table End -->
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </section><!-- End section 1 -->
+
+
+
+
+
+        </div><!-- End content -->
+    </div>
+</div>
+
+<!-- End Content =============================================== -->
+<!-- Footer ================================================== -->
+<footer>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="social_footer">
+
+                    <p>
+                        © Ezy Delivery 2019
+                    </p>
+                </div>
+            </div>
+        </div><!-- End row -->
+    </div><!-- End container -->
+</footer>
+<!-- End Footer =============================================== -->
+
+<div class="layer"></div><!-- Mobile menu overlay mask -->
+<!-- COMMON SCRIPTS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<!--<script src="js/common_scripts_min.js"></script>-->
+<script src="js/functions.js"></script>
+
+<script src="js/tabs.js"></script>
+<script>new CBPFWTabs(document.getElementById('tabs'));</script>
+<!-- SPECIFIC SCRIPTS -->
+<script>
+    var bellIcon = document.querySelector('.bell-icon');
+    var dropdownMenu = document.querySelector('.dropdown');
+    var notificationNumber = document.getElementsByClassName('notification-number');
+    var timeDelay = [1000, 2000, 3000, 4000, 5000, 6000];
+    function randomNumber() {
+        var random = Math.floor(Math.random() * 6);
+        for (var i = 0; i < notificationNumber.length; i++) {
+            notificationNumber[i].textContent = random;
+        }
+    }
+    function randomRange(data) {
+        var newTime = data[Math.floor(data.length * Math.random())];
+        return newTime;
+    }
+    function bellCheck(event) {
+        var isClickInside = bellIcon.contains(event.target);
+        if (isClickInside) {
+            dropdownMenu.classList.toggle('hide');
+            if (dropdownMenu.classList.contains('hide')) {
+                clearInterval(notificationInterval);
+                notificationInterval = setInterval(randomNumber, 2000);
+            }
+            else {
+                for (var i = 0; i < notificationNumber.length; i++) {
+                    notificationNumber[i].textContent = 0;
+                    clearInterval(notificationInterval);
+                }
+            }
+        }
+        else {
+            dropdownMenu.classList.add('hide');
+            clearInterval(notificationInterval);
+            notificationInterval = setInterval(randomNumber, randomRange(timeDelay));
+        }
+    }
+    var notificationInterval = setInterval(randomNumber, randomRange(timeDelay));
+    window.addEventListener('click', bellCheck);</script>
+
+<script>
+    // 10 minutes from now
+    var time_in_minutes = 10;
+    var current_time = Date.parse(new Date());
+    var deadline = new Date(current_time + time_in_minutes * 60 * 1000);
+
+
+    function time_remaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        return { 'total': t, 'days': days, 'hours': hours, 'minutes': minutes, 'seconds': seconds };
+    }
+    function run_clock(id, endtime) {
+        var clock = document.getElementById(id);
+        function update_clock() {
+            var t = time_remaining(endtime);
+            clock.innerHTML = 'minutes: ' + t.minutes + '<br>seconds: ' + t.seconds;
+            if (t.total <= 0) { clearInterval(timeinterval); }
+        }
+        update_clock(); // run function once at first to avoid delay
+        var timeinterval = setInterval(update_clock, 1000);
+    }
+    run_clock('clockdiv', deadline);
+</script>

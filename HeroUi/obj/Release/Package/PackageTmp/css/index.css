@@ -1,0 +1,79 @@
+
+.banner{
+    position: relative;
+    width: 100%;
+    height:auto;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .banner .nav .right_btn .bussines_btn {
+    position: absolute;
+    top: 5%;
+    right:9%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #4BC25A;
+    font-size: 16px;
+    padding: 6px 18px;
+    border: none;
+    
+    box-shadow: 0px 1px 4px #a7a41c;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .banner .nav .right_btn .partner_btn {
+    position: absolute;
+    top: 5%;
+    right:0%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #4BC25A;
+    font-size: 16px;
+    
+    box-shadow: 0px 1px 4px #a7a41c;
+    padding:  6px 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .banner .nav .right_btn .partner_btn:hover {
+    border:1px solid #4BC25A;
+    
+
+    color:#4BC25A;
+    background-color: #ffffff;
+  }
+  
+  .banner .nav .right_btn .bussines_btn:hover {
+    border:1px solid #4BC25A;
+    color:#4BC25A;
+    background-color: #ffffff;
+  }
+
+  .banner .nav .logo_left img{
+    height: 6em;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 8em;
+
+  }
+  
+  .banner .nav .logo_left h2{
+    position: absolute;
+    top: 3%;
+    left: 11%;
+    font-weight: bold;
+    color: #4BC25A;
+}
+  

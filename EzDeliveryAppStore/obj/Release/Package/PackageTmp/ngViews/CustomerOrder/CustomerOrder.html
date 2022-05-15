@@ -1,0 +1,484 @@
+﻿
+
+    <style>
+        .mapouter {
+    position: relative;
+    text-align: bottom;
+    height: 700px;
+    width: 100%;
+}
+           #map {
+       
+        height: 300px;
+        border: 2px solid #209da7;
+      
+    }
+           .gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+    height: 700px;
+    width: 100%;
+    margin-top: 27px;
+    margin-left: 0;
+}
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container-fluid {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .footer {
+            margin-top: 6em;
+        }
+
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        .mt-0 {
+            margin-top: 0px;
+        }
+
+        h2 {
+            color: #4AC259;
+        }
+        .pac-container {
+    background-color: #fff;
+    position: absolute;
+    z-index: 9999999999;
+    border-radius: 2px;
+    border-top: 1px solid #d9d9d9;
+    font-family: Arial,sans-serif;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+        .tagline1 {
+    color: #4BC25A;
+    font-size: 13px;
+    margin-top: -1em;
+    /* position: absolute; */
+    text-decoration: underline;
+    top: 67%;
+    left: 21%;
+    margin-left: 5em;}
+        .eachFormField{
+            magin-top:2em;
+        }
+
+        .confirm_btn{
+            /*margin-left:14em;*/
+            margin-top:0em;
+            border:none;
+            width:183px;
+            height:38px;
+            border-radius:12px;
+            color:white;
+            background-color:#4bc25a;
+        }
+       .swal2-container{
+           z-index:9999 !important;
+       }  .icon-class i { 
+            position: absolute; 
+            position: absolute;
+            left: 90%;
+            top: 55%;
+            color: #4BC25A;
+        }
+        .box-input {
+            box-shadow: 0 2px 5px 0 rgb(62, 160, 75);
+        }
+    </style>
+
+    <div class="container-fluid" id="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 logo_field">
+
+                        <a href="home.html" class="logo  logo_field">
+                            <figure>
+
+                                <img src="../../../images/logo.png">
+                                <span style="color:#4BC25A;font-size:25x;font-weight:bold;"> Ezy Delivery</span>
+                                <p class="tagline1"> Make Your Life Ezy </p>
+                            </figure>
+
+                        </a>
+                    </div>
+
+                    <!--<div class="col-lg-3">
+                    <label class="field a-field a-field_a3 page__field length_increase">
+                        <input class="field__input" placeholder="Search" name="Search" id="Search" style="padding-right: 29px; border:2px solid #cec6c6;color:#cec6c6;">
+                        <span class="field__label-wrap">
+                            <span class="field__label " style="color:green;">
+                                Search
+                            </span>
+                        </span>
+
+                    </label>
+                    <div id="errorNumber" class="error">
+                        Search
+                    </div>
+                </div>-->
+                    <!--<div class="col-lg-2">
+                    <figure>
+                        <img src="../../../images/discount.svg" style="    height: 30px;
+                                margin-top: 2em;">
+                    </figure> <span style="color: #4BC25A;
+                            margin-top: -24px;
+                            position: absolute;
+                            margin-left: 4em;">Offer</span>
+                </div>-->
+
+
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 pull-right">
+                        <div class="row">
+                            <button class="login_s pull-right" ng-show="AuthCust!='false'">
+                                <a href="/Home">
+                                    Home
+                                </a>
+                            </button>
+
+                            <button class="login_s pull-right">
+                                <a href="Order">
+                                    Order
+                                </a>
+                            </button>
+
+                            <button class="login_s pull-right">
+                                <a href="MyOrder">
+                                    My Order
+                                </a>
+                            </button>
+
+                            <button class="login_s pull-right" ng-show="AuthCust!='false'">
+                                <a href="/Logout">
+                                    Logout
+                                </a>
+                            </button>
+
+
+
+
+                        </div>
+                    </div>
+
+
+                    <!--<div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <button class="login_s pull-right">
+                            <a href="Login">
+                                LogOut
+                            </a>
+                        </button>
+
+
+                    </div>
+
+                </div>-->
+
+
+                </div>
+            </div>
+
+        </section>
+        <section class="mt-291">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
+
+                    <div class="col-lg-2 col-md-6 col-sm-12">
+                        </div>
+                        <div class="col-lg-8 col-md-6 col-sm-12">
+
+                            <form name="orderForm" novalidate autocomplete="off" class="">
+                                <h2 class="mt-0">Send Package</h2>
+                                <div class="row">
+
+                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12  eachFormField">
+                                        <label class="field a-field a-field_a3 page__field icon-class">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <input class="field__input box-input" ng-model="PickupPoint" id="gmap" ng-keyup="getPickupAddress()" placeholder="From" name="from" required>
+                                            <span class="field__label-wrap">
+                                                <span class="field__label " style="color:#020000">
+                                                    From <span style="color: #E76886;">*</span>
+                                                </span>
+                                            </span>
+
+                                        </label>
+                                        <p ng-show="submitted==true && orderForm.from.$error.required"><b style="color:brown">*From  Is Required</b></p>
+
+                                    </div>
+
+
+
+
+                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12 eachFormField">
+                                        <label class="field a-field a-field_a3 page__field icon-class">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <input class="field__input box-input" placeholder="To" ng-model="DeliveryPoint" id="Dmap" ng-keyup="getDestinationAddress()" name="to" required>
+                                            <span class="field__label-wrap">
+                                                <span class="field__label " style="color:#020000">
+                                                    To <span style="color: #E76886;">*</span>
+                                                </span>
+                                            </span>
+
+                                        </label>
+                                        <p ng-show="submitted==true && orderForm.to.$error.required"><b style="color:brown">*To  Is Required</b></p>
+
+                                    </div>
+                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12  eachFormField">
+                                        <label class="field a-field a-field_a3 page__field">
+                                            <input class="field__input box-input" ng-model="FromNumber" placeholder="Mobile Number" name="fromnumber" required>
+                                            <span class="field__label-wrap">
+                                                <span class="field__label " style="color:#020000">
+                                                    From Mobile Number <span style="color: #E76886;">*</span>
+                                                </span>
+                                            </span>
+
+                                        </label>
+                                        <p ng-show="submitted==true && orderForm.fromnumber.$error.required"><b style="color:brown">*From  Is Required</b></p>
+
+                                    </div>
+                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12  eachFormField">
+                                        <label class="field a-field a-field_a3 page__field">
+                                            <input class="field__input box-input" ng-model="ToNumber" placeholder="Mobile Number" name="tonumber" required>
+                                            <span class="field__label-wrap">
+                                                <span class="field__label " style="color:#020000">
+                                                    To Mobile Number <span style="color: #E76886;">*</span>
+                                                </span>
+                                            </span>
+
+                                        </label>
+                                        <p ng-show="submitted==true && orderForm.tonumber.$error.required"><b style="color:brown">*From  Is Required</b></p>
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12 eachFormField">
+                                        <label class="field a-field a-field_a3 page__field">
+                                            <input class="field__input box-input" placeholder="&#x20B9;" name="price" id="goodPrice" ng-model="ValueOfGood">
+                                            <span class="field__label-wrap">
+                                                <span class="field__label " style="color:#020000">
+                                                    Estimated Value Goods
+                                                </span>
+                                            </span>
+
+                                        </label>
+
+
+                                    </div>
+                                    <div class="col-lg-6 eachFormField a-field_a3">
+                                        <select class="box-input" ng-model="CategoryId" style="width:100%;">
+                                            <option value="">Select Category</option>
+                                            <option value="{{c.CategoryId}}" ng-repeat="c in Category">{{c.CategoryNameEn}}</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12 eachFormField">
+                                        <label class="field a-field a-field_a3 page__field">
+                                            <input class="field__input box-input" placeholder="Weight" ng-model="Weight" name=" Size Ex. 10*20" id="To">
+                                            <span class="field__label-wrap">
+                                                <span class="field__label " style="color:#020000">
+                                                    Goods Weight
+                                                </span>
+                                            </span>
+
+                                        </label>
+
+
+                                    </div>
+                                    <div class="col-lg-6 col-md-6  col-sm-12 col-xs-12 eachFormField">
+                                        <label class="field a-field a-field_a3 page__field">
+                                            <input class="field__input box-input" ng-model="Size" placeholder=" Size Ex. 10*20" name=" Size Ex. 10*20" id="To">
+                                            <span class="field__label-wrap">
+                                                <span class="field__label " style="color:#020000">
+                                                    Goods Size
+                                                </span>
+                                            </span>
+
+                                        </label>
+
+
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 eachFormField">
+
+
+                                        <div class="col-lg-6 col-md-12 col-sm-12 eachFormField" style="margin-top:2em;">
+                                          
+                                            <div class="dropzone" action="upload.php" method="POST">
+
+                                                <input type="file" fileread="ProductPic" accept="image/*" placeholder="">
+
+                                                <div class="container1" ng-if="objGvtId.FilePath != ''">
+                                                    <img class="profile-picture  mb-2" src="{{objGvtId.FilePath}}" alt="" style="cursor:pointer;width: 70px; height: 72px;">
+
+                                                    <div class="overlay">
+                                                        <a href="javascript:void(0);" class="icon">
+                                                            <div style="left: 13px; top: 17px;">
+                                                                <i class="nav-icon i-Close-Window font-weight-bold" ng-click="RemoveDoc(objGvtId);" style="right: 130px;
+                                                            font-size: 30px;"></i>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <p>Drag your files here  Or Update</p>
+
+
+
+
+                                            </div>
+
+
+
+
+                                        </div>
+
+
+
+                                        <div class="col-lg-6 col-md-12 col-sm-12 eachFormField" style="margin-top:2em;">
+<textarea class=" box-input" placeholder="Order details" name="message" id="message" cols="30" rows="3" style="height: 113px; width:100%;" ng-model="OrderDetailText"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 20px;">
+                                </div>
+                                <div class="center mt-291">
+                                    <button type="button" class="confirm_btn"
+                                            ng-click="submitted=true;CreateCustomerOrder(orderForm.$valid)">
+                                        Confirm
+                                    </button>
+
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-12  " style="margin-top:2em;">
+
+                            <div class="mapouter" ng-hide="!emptyAddress">
+                                <div class="gmap_canvas">
+                                    <div id="map">
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+            </div>
+
+        </section>
+        <section class="footer">
+            <div class="row">
+                <div class="col-lg-12 grey_box_footer">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
+
+                            <div class="logo_footer">
+                                <a href="home.html"><img src="../../../images/logo.png"> </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-7  col-md-9 col-sm-9 col-xs-9 icons_ft">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+
+
+                                    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 social_icons1" style="/* margin-left: 0em; */  ">
+
+
+                                        <ul class="icons1">
+                                            <li>
+                                                <img src="../../../images/facebook.png">
+                                            </li>
+                                            <li>
+                                                <img src="../../../images/twitter.png">
+                                            </li>
+                                            <li>
+                                                <img src="../../../images/whatsapp.png">
+                                            </li>
+                                            <li>
+                                                <img src="../../../images/gmail (1).png">
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu_footer">
+                                        <ul>
+                                            <li>
+                                                <a href=""> About </a>
+                                            <li>
+                                                <a href=""> Careers </a>
+
+                                            </li>
+                                            <li>
+                                                <a href=""> Terms & Conditions </a>
+
+                                            </li>
+                                            <li>
+                                                <a href=""> privacy Policy </a>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-2 col-md-12">
+                            <div class="row" >
+
+                                <div class="walking_footer pull-right">
+                                    <img src="../../../images/walking.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="copyright">
+            <div class="row"  style="background-color:#4BC25A">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+
+                    <div class="green_bg_ft1">
+                        <p> atozeesolutions@2019</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+
+    </div><!-- container div close-->

@@ -1,0 +1,24 @@
+
+@media screen and (max-width: 640px){
+
+    .banner .nav .right_btn .bussines_btn {
+       
+        right:0%;
+     
+        font-size: 12px;
+        padding: 3px 12px;
+   
+      }
+
+    }
+    @media screen and (max-width: 640px){
+
+      .banner .nav .right_btn .partner_btn {
+
+        top: 23%;
+        right:0%;
+     
+        font-size: 12px;
+        padding:  3px 12px;  
+       }
+    }
